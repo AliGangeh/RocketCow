@@ -1,0 +1,683 @@
+generator: ck2yaml
+input-files: [Nasa_propellant.inp]
+cantera-version: 3.1.0
+date: Sun, 18 May 2025 16:03:48 -0700
+
+units: {length: cm, time: s, quantity: mol, activation-energy: cal/mol}
+
+species:
+- name: Air(g)
+  composition: {N: 1.56, O: .42, Ar: .01}
+  thermo:
+    model: NASA9
+    temperature-ranges: [200.0, 1000.0, 6000.0]
+    data:
+    - [1.00995016e+04, -196.827561, 5.00915511, -5.76101373e-03, 1.06685993e-05,
+      -7.94029797e-09, 2.18523191e-12, -176.796731, -3.921504225]
+    - [2.41521443e+05, -1257.8746, 5.14455867, -2.13854179e-04, 7.06522784e-08,
+      -1.07148349e-11, 6.57780015e-16, 6462.26319, -8.147411905]
+    note: Mole%:N2 78.084,O2 20.9476,Ar .9365,CO2 .0319.Gordon,1982.Reac
+      [g 9/95]
+- name: ClO3F(g)
+  composition: {Cl: 1, O: 3, F: 1}
+  thermo:
+    model: NASA9
+    temperature-ranges: [200.0, 1000.0, 6000.0]
+    data:
+    - [4.46107731e+04, -589.235221, 3.55885081, 0.02809585831, -3.61088035e-05,
+      2.273331859e-08, -5.71673304e-12, -1388.667752, 4.590741392]
+    - [-3.91049544e+05, -1193.220687, 13.88657545, -3.54131206e-04, 7.82546477e-08,
+      -8.97832543e-12, 4.16386966e-16, -1275.082535, -51.06452991]
+    note: Hf:Wagman,1982 p49. Chase,1998 p755. React. [g 5/95]
+- name: JP-10(g)
+  composition: {C: 10, H: 16}
+  thermo:
+    model: NASA9
+    temperature-ranges: [200.0, 1000.0, 6000.0]
+    data:
+    - [-7.31076944e+05, 1.521764245e+04, -113.9312644, 0.428150162, -5.21874044e-04,
+      3.3572334e-07, -8.80575098e-11, -8.06748212e+04, 632.014861]
+    - [1.220329594e+07, -5.79484624e+04, 109.2281156, -0.01082406215, 2.034992622e-06,
+      -2.052060369e-10, 8.57576021e-15, 3.25733405e+05, -709.235076]
+    note: Exo-tetrahydrodicyclopentadiene. Zehe,2002. React. [g 6/01]
+- name: Jet-A(g)
+  composition: {C: 12, H: 23}
+  thermo:
+    model: NASA9
+    temperature-ranges: [273.15, 1000.0, 6000.0]
+    data:
+    - [-6.06869559e+05, 8328.25959, -43.1232127, 0.2572390455, -2.62931604e-04,
+      1.64498894e-07, -4.64533514e-11, -7.60696276e+04, 279.4305937]
+    - [1.858356102e+07, -7.67721989e+04, 141.9826133, -7.43752453e-03, 5.85620255e-07,
+      1.223955647e-11, -3.149201922e-15, 4.22198952e+05, -898.606104]
+    note: McBride,1996. Faith,1971. Gracia-Salcedo,1988. React. [g 8/01]
+- name: CH3OH(L)
+  composition: {C: 1, H: 4, O: 1}
+  thermo:
+    model: NASA9
+    temperature-ranges: [175.61, 390.0]
+    data:
+    - [-1.302004763e+06, 3.16698418e+04, -303.1242152, 1.60223113, -4.59450734e-03,
+      6.99017831e-06, -4.20738895e-09, -1.656168201e+05, 1514.346642]
+    note: MeOH. TRC(12/87) p5000 (12/84)tc,uc,vc5031,5033. React. [n12/84]
+- name: C2H5OH(L)
+  composition: {C: 2, H: 6, O: 1}
+  thermo:
+    model: NASA9
+    temperature-ranges: [159.0, 390.0]
+    data:
+    - [4.50111594e+05, -1.02082899e+04, 101.426678, -0.387467261, 7.12139261e-04,
+      -1.85707145e-07, -2.03762257e-10, 7448.5579, -504.425552]
+    note: Ethanol. TRC(12/87) p5000 (12/84) tc,uc,vc5031-3. React. [n12/84]
+- name: C6H6(L)
+  composition: {C: 6, H: 6}
+  thermo:
+    model: NASA9
+    temperature-ranges: [278.68, 500.0]
+    data:
+    - [-2.29100394e+06, 3.69205816e+04, -182.0019971, 0.2634137216, 9.74258592e-04,
+      -3.30790915e-06, 2.888191394e-09, -1.730169095e+05, 1070.458659]
+    note: TRC(10/86) tc,uc,vc3201 (4/83) p3200. React. [n10/86]
+- name: C6H5NH2(L)
+  composition: {C: 6, H: 7, N: 1}
+  thermo:
+    model: NASA9
+    temperature-ranges: [267.13, 460.0]
+    data:
+    - [6.25765349e+07, -8.93011809e+05, 5055.20144, -13.97470822, 0.0188972968,
+      -9.20591024e-06, -1.289458554e-09, 4.26745927e+06, -2.801220752e+04]
+    note: Aniline. TRC(12/88) tc,uc,vc9370. TRC(6/95) p9370. React. [n12/88]
+- name: C6H14(L),n-hexa
+  composition: {C: 6, H: 14}
+  thermo:
+    model: NASA9
+    temperature-ranges: [177.86, 300.0]
+    data:
+    - [7.72101613e+06, -2.249298616e+05, 2717.090647, -16.98251992, 0.0590721518,
+      -1.074528475e-04, 8.02423827e-08, 8.80869173e+05, -1.292771483e+04]
+    note: n-hexane. TRC(4/85) p,tc,uc,vc1440,1441. React. [n 4/85]
+- name: C7H8(L)
+  composition: {C: 7, H: 8}
+  thermo:
+    model: NASA9
+    temperature-ranges: [178.15, 500.0]
+    data:
+    - [-3.71354951e+06, 7.77252903e+04, -631.226986, 2.724391982, -6.10353508e-03,
+      7.0224219e-06, -3.11371568e-09, -3.4521155e+05, 3265.98071]
+    note: TRC(10/86) tc uc vc3200-1 (4/83) p-3200. React. [n10/86]
+- name: C7H16(L),n-hept
+  composition: {C: 7, H: 16}
+  thermo:
+    model: NASA9
+    temperature-ranges: [182.58, 380.0]
+    data:
+    - [1.759947367e+06, -3.74939679e+04, 396.30649, -2.117827431, 6.82824867e-03,
+      -1.131862116e-05, 7.73686013e-09, 1.269072572e+05, -1921.68684]
+    note: TRC(10/84) p-1010 (10/75) tc,uc,vc1460. React. [n10/75]
+- name: C8H18(L),n-octa
+  composition: {C: 8, H: 18}
+  thermo:
+    model: NASA9
+    temperature-ranges: [216.37, 400.0]
+    data:
+    - [-1.683314826e+07, 3.53261508e+05, -2967.857531, 13.16703807, -0.0318682241,
+      4.07574801e-05, -2.153277285e-08, -1.588494258e+06, 1.521639569e+04]
+    note: TRC(10/76) tc,uc,vc1491,1492. Hf:(10/84) p1010. React. [n10/84]
+- name: C8H18(L),isooct
+  composition: {C: 8, H: 18}
+  thermo:
+    model: NASA9
+    temperature-ranges: [165.79, 380.0]
+    data:
+    - [1.419157943e+05, -2937.251288, 41.6883476, -0.0843694221, 2.894147919e-04,
+      -2.200563712e-07, 7.23422557e-11, -2.479398829e+04, -193.0220201]
+    note: TRC(10/76) tc,uc,vc1491,1492. Hf:(10/82) p1490. React. [n10/82]
+- name: H2O2(L)
+  composition: {H: 2, O: 2}
+  thermo:
+    model: NASA9
+    temperature-ranges: [272.74, 6000.0]
+    data:
+    - [0.0, 0.0, 10.74386825, 0.0, 0.0, 0.0, 0.0, -2.578789845e+04, -48.03221291]
+    note: Gurvich, 1989 v1 pt1 p126 pt2 p303. React. [tpis89]
+- name: Jet-A(L)
+  composition: {C: 12, H: 23}
+  thermo:
+    model: NASA9
+    temperature-ranges: [220.0, 550.0]
+    data:
+    - [-4.21826213e+05, -5576.60045, 152.2120958, -0.861019755, 3.071662234e-03,
+      -4.70278954e-06, 2.743019833e-09, -3.23836915e+04, -678.109491]
+    note: McBride,1996. Faith,1971. Gracia-Salcedo,1988. React. [g 2/96]
+- name: NH4ClO4(I)
+  composition: {N: 1, H: 4, Cl: 1, O: 4}
+  thermo:
+    model: NASA9
+    temperature-ranges: [100.0, 513.15]
+    data:
+    - [-3075.3449, -213.650613, 10.21583093, 0.01659463617, 1.665266832e-05,
+      -2.306096672e-08, 1.543657693e-11, -3.82576726e+04, -42.3025438]
+    note: Ammonium Perchlorate. Chase,1998 p766. React. [j12/62]
+- name: NH4ClO4(II)
+  composition: {N: 1, H: 4, Cl: 1, O: 4}
+  thermo:
+    model: NASA9
+    temperature-ranges: [513.15, 1000.0, 1500.0]
+    data:
+    - [9.73932749e+06, -7.09503512e+04, 213.3435041, -0.2657628679, 2.034168863e-04,
+      -5.62822976e-08, 0.0, 3.48536644e+05, -1304.962218]
+    - [4.17468458e+06, -1.716642636e+04, 19.25955165, 0.0349951891, -6.26444339e-06,
+      -1.494354361e-09, 0.0, 7.13475251e+04, -127.4562074]
+    note: Ammonium Perchlorate. Chase,1998 p766. React. [j12/62]
+- name: NH4NO3(IV)
+  composition: {N: 2, H: 4, O: 3}
+  thermo:
+    model: NASA9
+    temperature-ranges: [256.2, 298.15, 305.38]
+    data:
+    - [-1.046561904e+07, 1.560375249e+05, -914.31536, 2.670225944, -3.54993291e-03,
+      1.692615192e-06, 0.0, -7.86173516e+05, 5038.72621]
+    - [0.0, 0.0, 5.865649329, 0.03643028874, 0.0, 0.0, 0.0, -4.73393723e+04,
+      -26.14362444]
+    note: Rhombic(IV). Gurvich,1989 pt1 p370 pt2 p322. React. [tpis89]
+- name: NH4NO3(III)
+  composition: {N: 2, H: 4, O: 3}
+  thermo:
+    model: NASA9
+    temperature-ranges: [305.38, 357.25]
+    data:
+    - [0.0, 0.0, 7.233138213, 0.02333270391, 0.0, 0.0, 0.0, -4.69417938e+04,
+      -29.29851693]
+    note: Rhombic(III). Gurvich,1989 pt1 p370 pt2 p322. React. [tpis89]
+- name: NH4NO3(II)
+  composition: {N: 2, H: 4, O: 3}
+  thermo:
+    model: NASA9
+    temperature-ranges: [357.25, 399.0]
+    data:
+    - [0.0, 0.0, 60.23205216, -0.1767993544, 0.0, 4.528829721e-07, 0.0,
+      -5.47863351e+04, -275.7806209]
+    note: Tetragonal(II). Gurvich,1989 pt1 p370 pt2 p322. React. [tpis89]
+- name: NH4NO3(I)
+  composition: {N: 2, H: 4, O: 3}
+  thermo:
+    model: NASA9
+    temperature-ranges: [399.0, 442.85]
+    data:
+    - [0.0, 0.0, 12.95325882, 0.01563531705, 0.0, 0.0, 0.0, -4.78370128e+04,
+      -58.48510823]
+    note: Cubic(I). Gurvich,1989 pt1 p370 pt2 p322. React. [tpis89]
+- name: NH4NO3(L)
+  composition: {N: 2, H: 4, O: 3}
+  thermo:
+    model: NASA9
+    temperature-ranges: [442.85, 900.0]
+    data:
+    - [0.0, 0.0, 19.36373881, 0.0, 0.0, 0.0, 0.0, -4.8437933e+04, -89.03005276]
+    note: Liquid Gurvich,1989 pt1 p370 pt2 p322. React. [tpis89]
+- name: N2H4(L)
+  composition: {N: 2, H: 4}
+  thermo:
+    model: NASA9
+    temperature-ranges: [100.0, 800.0]
+    data:
+    - [2.080965738e+04, -741.816763, 19.16569184, -0.0453933012, 1.342024252e-04,
+      -1.470873931e-07, 6.05628826e-11, 5735.40818, -88.2021394]
+    note: Hydrazine.Hf:Gurvich,1989 pt1 p360. Chase,1998(12/65). React.
+      [g11/99]
+- name: B2H6(L)
+  composition: {B: 2, H: 6}
+  thermo:
+    model: constant-cp
+    T0: 180.590 K
+    h0: 16.445e3
+    s0: 0.000 
+    cp0: 0.000 
+- name: B5H9(L)
+  composition: {B: 5, H: 9}
+  thermo:
+    model: constant-cp
+    T0: 298.150 K
+    h0: 42.840e3
+    s0: 0.000 
+    cp0: 0.000 
+- name: (CH2)x(cr)
+  composition: {C: 1, H: 2}
+  thermo:
+    model: constant-cp
+    T0: 298.150 K
+    h0: -25.600e3
+    s0: 0.000 
+    cp0: 0.000 
+- name: CH3NO2(L)
+  composition: {C: 1, H: 3, N: 1, O: 2}
+  thermo:
+    model: constant-cp
+    T0: 298.150 K
+    h0: -113.100e3
+    s0: 0.000 
+    cp0: 0.000 
+- name: CH4(L)
+  composition: {C: 1, H: 4}
+  thermo:
+    model: constant-cp
+    T0: 111.643 K
+    h0: -89.233e3
+    s0: 0.000 
+    cp0: 0.000 
+- name: CH6N2(L)
+  composition: {C: 1, H: 6, N: 2}
+  thermo:
+    model: constant-cp
+    T0: 298.150 K
+    h0: 54.200e3
+    s0: 0.000 
+    cp0: 0.000 
+- name: C2H2(L),acetyle
+  composition: {C: 2, H: 2}
+  thermo:
+    model: constant-cp
+    T0: 192.350 K
+    h0: 207.599e3
+    s0: 0.000 
+    cp0: 0.000 
+- name: CH3CN(L)
+  composition: {C: 2, H: 3, N: 1}
+  thermo:
+    model: constant-cp
+    T0: 298.150 K
+    h0: 31.380e3
+    s0: 0.000 
+    cp0: 0.000 
+- name: C2H4(L)
+  composition: {C: 2, H: 4}
+  thermo:
+    model: constant-cp
+    T0: 169.420 K
+    h0: 33.945e3
+    s0: 0.000 
+    cp0: 0.000 
+- name: C2H4O(L),ethyle
+  composition: {C: 2, H: 4, O: 1}
+  thermo:
+    model: constant-cp
+    T0: 283.650 K
+    h0: -78.841e3
+    s0: 0.000 
+    cp0: 0.000 
+- name: C2H6(L)
+  composition: {C: 2, H: 6}
+  thermo:
+    model: constant-cp
+    T0: 184.559 K
+    h0: -103.819e3
+    s0: 0.000 
+    cp0: 0.000 
+- name: C2H8N2(L),UDMH
+  composition: {C: 2, H: 8, N: 2}
+  thermo:
+    model: constant-cp
+    T0: 298.150 K
+    h0: 48.900e3
+    s0: 0.000 
+    cp0: 0.000 
+- name: C2N2(L)
+  composition: {C: 2, N: 2}
+  thermo:
+    model: constant-cp
+    T0: 252.050 K
+    h0: 283.209e3
+    s0: 0.000 
+    cp0: 0.000 
+- name: C3H6(L),propyle
+  composition: {C: 3, H: 6}
+  thermo:
+    model: constant-cp
+    T0: 225.460 K
+    h0: -2.704e3
+    s0: 0.000 
+    cp0: 0.000 
+- name: C3H7NO3(L)
+  composition: {C: 3, H: 7, N: 1, O: 3}
+  thermo:
+    model: constant-cp
+    T0: 298.150 K
+    h0: -214.500e3
+    s0: 0.000 
+    cp0: 0.000 
+- name: C3H8(L)
+  composition: {C: 3, H: 8}
+  thermo:
+    model: constant-cp
+    T0: 231.076 K
+    h0: -128.228e3
+    s0: 0.000 
+    cp0: 0.000 
+- name: C4H8(L),1-buten
+  composition: {C: 4, H: 8}
+  thermo:
+    model: constant-cp
+    T0: 266.920 K
+    h0: -25.173e3
+    s0: 0.000 
+    cp0: 0.000 
+- name: C4H10(L),n-buta
+  composition: {C: 4, H: 10}
+  thermo:
+    model: constant-cp
+    T0: 272.638 K
+    h0: -150.664e3
+    s0: 0.000 
+    cp0: 0.000 
+- name: C4H10(L),isobut
+  composition: {C: 4, H: 10}
+  thermo:
+    model: constant-cp
+    T0: 261.361 K
+    h0: -159.664e3
+    s0: 0.000 
+    cp0: 0.000 
+- name: C5H12(L),n-pent
+  composition: {C: 5, H: 12}
+  thermo:
+    model: constant-cp
+    T0: 298.150 K
+    h0: -173.490e3
+    s0: 0.000 
+    cp0: 0.000 
+- name: ClF3(L)
+  composition: {Cl: 1, F: 3}
+  thermo:
+    model: constant-cp
+    T0: 284.890 K
+    h0: -193.386e3
+    s0: 0.000 
+    cp0: 0.000 
+- name: ClO3F(L)
+  composition: {Cl: 1, O: 3, F: 1}
+  thermo:
+    model: constant-cp
+    T0: 226.400 K
+    h0: -47.436e3
+    s0: 0.000 
+    cp0: 0.000 
+- name: Cl2(L)
+  composition: {Cl: 2}
+  thermo:
+    model: constant-cp
+    T0: 239.120 K
+    h0: -22.550e3
+    s0: 0.000 
+    cp0: 0.000 
+- name: F2(L)
+  composition: {F: 2}
+  thermo:
+    model: constant-cp
+    T0: 85.020 K
+    h0: -13.091e3
+    s0: 0.000 
+    cp0: 0.000 
+- name: F2O(L)
+  composition: {F: 2, O: 1}
+  thermo:
+    model: constant-cp
+    T0: 128.400 K
+    h0: 6.672e3
+    s0: 0.000 
+    cp0: 0.000 
+- name: HNO3(L)
+  composition: {H: 1, N: 1, O: 3}
+  thermo:
+    model: constant-cp
+    T0: 298.150 K
+    h0: -173.013e3
+    s0: 0.000 
+    cp0: 0.000 
+- name: H2(L)
+  composition: {H: 2}
+  thermo:
+    model: constant-cp
+    T0: 20.270 K
+    h0: -9.012e3
+    s0: 0.000 
+    cp0: 0.000 
+- name: IRFNA(L)
+  composition: {H: 1.57, N: 1.63, O: 4.70, F: 0.02}
+  thermo:
+    model: constant-cp
+    T0: 298.150 K
+    h0: -270.496e3
+    s0: 0.000 
+    cp0: 0.000 
+- name: JP-4(L)
+  composition: {C: 1, H: 1.94}
+  thermo:
+    model: constant-cp
+    T0: 298.150 K
+    h0: -22.723e3
+    s0: 0.000 
+    cp0: 0.000 
+- name: JP-5(L)
+  composition: {C: 1, H: 1.92}
+  thermo:
+    model: constant-cp
+    T0: 298.150 K
+    h0: -22.183e3
+    s0: 0.000 
+    cp0: 0.000 
+- name: JP-10(L)
+  composition: {C: 10, H: 16}
+  thermo:
+    model: constant-cp
+    T0: 298.150 K
+    h0: -122.800e3
+    s0: 0.000 
+    cp0: 0.000 
+- name: LiClO4(cr)
+  composition: {Li: 1, Cl: 1, O: 4}
+  thermo:
+    model: constant-cp
+    T0: 298.150 K
+    h0: -380.700e3
+    s0: 0.000 
+    cp0: 0.000 
+- name: NF3(L)
+  composition: {N: 1, F: 3}
+  thermo:
+    model: constant-cp
+    T0: 144.090 K
+    h0: -150.387e3
+    s0: 0.000 
+    cp0: 0.000 
+- name: NH3(L)
+  composition: {N: 1, H: 3}
+  thermo:
+    model: constant-cp
+    T0: 239.720 K
+    h0: -71.555e3
+    s0: 0.000 
+    cp0: 0.000 
+- name: N2(L)
+  composition: {N: 2}
+  thermo:
+    model: constant-cp
+    T0: 77.352 K
+    h0: -12.107e3
+    s0: 0.000 
+    cp0: 0.000 
+- name: N2O4(L)
+  composition: {N: 2, O: 4}
+  thermo:
+    model: constant-cp
+    T0: 298.150 K
+    h0: -17.549e3
+    s0: 0.000 
+    cp0: 0.000 
+- name: O2(L)
+  composition: {O: 2}
+  thermo:
+    model: constant-cp
+    T0: 90.170 K
+    h0: -12.979e3
+    s0: 0.000 
+    cp0: 0.000 
+- name: O3(L)
+  composition: {O: 3}
+  thermo:
+    model: constant-cp
+    T0: 161.850 K
+    h0: 122.527e3
+    s0: 0.000 
+    cp0: 0.000 
+- name: RP-1(L)
+  composition: {C: 1, H: 1.95}
+  thermo:
+    model: constant-cp
+    T0: 298.150 K
+    h0: -24.717e3
+    s0: 0.000 
+    cp0: 0.000 
+- name: C2H5OH(L),95%
+  composition: {C: 1.7628, H: 5.5255, O: 1}
+  thermo:
+    model: constant-cp
+    T0: 298.150 K
+    h0: -278.138e3
+    s0: 0.000 
+    cp0: 0.000 
+- name: C2H5OH(L),90%
+  composition: {C: 1.5575, H: 5.1149, O: 1}
+  thermo:
+    model: constant-cp
+    T0: 298.150 K
+    h0: -279.114e3
+    s0: 0.000 
+    cp0: 0.000 
+- name: C2H5OH(L),70%
+  composition: {C: 0.9542, H: 3.9085, O: 1}
+  thermo:
+    model: constant-cp
+    T0: 298.150 K
+    h0: -282.043e3
+    s0: 0.000 
+    cp0: 0.000 
+- name: C2H5OH(L),50%
+  composition: {C: 0.5622, H: 3.1245, O: 1 }
+  thermo:
+    model: constant-cp
+    T0: 298.150 K
+    h0: -283.987e3
+    s0: 0.000 
+    cp0: 0.000 
+- name: C2H5OH(L),40%
+  composition: {C: 0.4136, H: 2.8272, O: 1 }
+  thermo:
+    model: constant-cp
+    T0: 298.150 K
+    h0: -284.727e3
+    s0: 0.000 
+    cp0: 0.000 
+- name: H2O2(L),95%
+  composition: {H: 2, O: 1.9096}
+  thermo:
+    model: constant-cp
+    T0: 298.150 K
+    h0: -196.942e3
+    s0: 0.000 
+    cp0: 0.000 
+- name: H2O2(L),90%
+  composition: {H: 2, O: 1.8266}
+  thermo:
+    model: constant-cp
+    T0: 298.150 K
+    h0: -205.357e3
+    s0: 0.000 
+    cp0: 0.000 
+- name: H2O2(L),85%
+  composition: {H: 2, O: 1.7501}
+  thermo:
+    model: constant-cp
+    T0: 298.150 K
+    h0: -213.056e3
+    s0: 0.000 
+    cp0: 0.000 
+- name: H2O2(L),80%
+  composition: {H: 2, O: 1.6793}
+  thermo:
+    model: constant-cp
+    T0: 298.150 K
+    h0: -220.096e3
+    s0: 0.000 
+    cp0: 0.000 
+- name: H2O2(L),75%
+  composition: {H: 2, O: 1.6137}
+  thermo:
+    model: constant-cp
+    T0: 298.150 K
+    h0: -226.624e3
+    s0: 0.000 
+    cp0: 0.000 
+- name: H2O2(L),70%
+  composition: {H: 2, O: 1.5527}
+  thermo:
+    model: constant-cp
+    T0: 298.150 K
+    h0: -232.636e3
+    s0: 0.000 
+    cp0: 0.000 
+- name: H2O2(L),60%
+  composition: {H: 2, O: 1.4427}
+  thermo:
+    model: constant-cp
+    T0: 298.150 K
+    h0: -243.438e3
+    s0: 0.000 
+    cp0: 0.000 
+- name: H2O2(L),50%
+  composition: {H: 2, O: 1.3462}
+  thermo:
+    model: constant-cp
+    T0: 298.150 K
+    h0: -252.801e3
+    s0: 0.000 
+    cp0: 0.000 
+- name: T-1(L)
+  composition: {C: 1, H: 1.956}
+  thermo:
+    model: constant-cp
+    T0: 298.150 K
+    h0: -27.377e3
+    s0: 0.000 
+    cp0: 0.000 
+- name: C6H12O6(cr)
+  composition: {C: 6, H: 12, O: 6}
+  thermo:
+    model: constant-cp
+    T0: 298.150 K
+    h0: -1273.121e3
+    s0: 0.000 
+    cp0: 0.000 
+- name: C20H42(L)
+  composition: {C: 20, H: 42}
+  thermo:
+    model: constant-cp
+    T0: 298.150 K
+    h0: -556.500e3
+    s0: 0.000 
+    cp0: 0.000 
+- name: C32H66(S)
+  composition: {C: 32, H: 66}
+  thermo:
+    model: constant-cp
+    T0: 298.150 K
+    h0: -967.800e3
+    s0: 0.000 
+    cp0: 0.000 
+- name: N2O(L),298.15
+  composition: {N: 2, O: 1}
+  thermo:
+    model: constant-cp
+    T0: 298.150 K
+    h0: 65.100e3
+    s0: 0.000 
+    cp0: 0.000 
