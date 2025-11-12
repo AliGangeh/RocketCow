@@ -673,7 +673,7 @@ species:
     h0: -967.800e3
     s0: 0.000 
     cp0: 0.000 
-- name: N2O(L),298.15
+- name: N2O(L)
   composition: {N: 2, O: 1}
   thermo:
     model: constant-cp

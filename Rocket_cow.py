@@ -7,7 +7,29 @@ import plotly.express as px
 import plotly.graph_objects as go
 import yaml
 import fluids
+import streamlit as st
+import time
 ureg = UnitRegistry()
+state = st.session_state
+
+# initialize buttons
+if 'run_button' not in state:
+    state.run_button = False
+
+if 'plot_button' not in state:
+    state.plot_button = False
+
+if 'contour_button' not in state:
+    state.contour_button = False
+
+def run_button():
+    state.run_button = True  
+
+def plot_button():
+    state.plot_button = True
+
+def contour_button():
+    state.contour_button = True  
 
 class EngineState:
     '''
@@ -75,7 +97,7 @@ class EngineState:
     '''
 
     def __init__(self, oxidizer, fuel, of_ratio, pressure, exit_value, gas, condensate = None, size_value=None, assumption = 'equilibrium', size_parameter ="thrust",  
-                 exit_parameter="pressure", transport=None, throat_inlet_radius_ratio=1.5, temperature_wall=None):
+                 exit_parameter="pressure", transport=None, throat_inlet_radius_ratio=1.5, temperature_wall=500):
         '''
         Initializes instance of class. See class description for details. 
         '''
@@ -85,40 +107,46 @@ class EngineState:
         self._pressure = pressure
         oxidizer.TP = oxidizer.T, pressure
         oxidizer.equilibrate('TP')
-        self._oxidizer = self.__clone_solution(oxidizer)
+        self._oxidizer = oxidizer
+        # self._oxidizer = self.__clone_solution(oxidizer)
         fuel.TP = fuel.T, pressure
         fuel.equilibrate('TP')
-        self._fuel = self.__clone_solution(fuel)
-        self.chamber_gas = self.__clone_solution(gas)
-        self.throat_gas = self.__clone_solution(gas)
-        self.exit_gas = self.__clone_solution(gas)
-        self._gas = self.__clone_solution(gas)
+        self._fuel = fuel
+        self._gas = gas
+        self._condensate = condensate
+        self._transport = transport
+        # self._fuel = self.__clone_solution(fuel)
+        # self.chamber_gas = self.__clone_solution(gas)
+        # self.throat_gas = self.__clone_solution(gas)
+        # self.exit_gas = self.__clone_solution(gas)
+        # self._gas = self.__clone_solution(gas)
 
-        if condensate:
-            self._condensate = self.__clone_solution(condensate)
-            self.exit_condensate = self.__clone_solution(condensate)
-            self.throat_condensate = self.__clone_solution(condensate)
-            self.chamber_condensate = self.__clone_solution(condensate)
-        else:
-            self._condensate = None
-            self.exit_condensate = None
-            self.throat_condensate = None
-            self.chamber_condensate = None
-        if transport: 
-            self._transport = self.__clone_solution(transport)
-            self.exit_transport = self.__clone_solution(transport)
-            self.throat_transport = self.__clone_solution(transport)
-            self.chamber_transport = self.__clone_solution(transport)
-        else: 
-            self._transport = None
-            self.exit_transport = None
-            self.throat_transport = None
-            self.chamber_transport = None
+        # if condensate:
+        #     self._condensate = self.__clone_solution(condensate)
+        #     self.exit_condensate = self.__clone_solution(condensate)
+        #     self.throat_condensate = self.__clone_solution(condensate)
+        #     self.chamber_condensate = self.__clone_solution(condensate)
+        # else:
+        #     self._condensate = None
+        #     self.exit_condensate = None
+        #     self.throat_condensate = None
+        #     self.chamber_condensate = None
+        # if transport: 
+        #     self._transport = self.__clone_solution(transport)
+        #     self.exit_transport = self.__clone_solution(transport)
+        #     self.throat_transport = self.__clone_solution(transport)
+        #     self.chamber_transport = self.__clone_solution(transport)
+        # else: 
+        #     self._transport = None
+        #     self.exit_transport = None
+        #     self.throat_transport = None
+        #     self.chamber_transport = None
+
     
         # finds chamber, throat, and exit properties
-        self.__chamber_properties(self.chamber_gas, self.chamber_condensate, self.chamber_transport)
-        self.__throat_properties(self.throat_gas, self.throat_condensate, self.throat_transport)
-        self.__exit_properties(self.throat_gas, self.throat_condensate, self.throat_transport, exit_value, exit_parameter=exit_parameter)
+        self.__chamber_properties(self._gas, self._condensate, self._transport)
+        self.__throat_properties(self._gas, self._condensate, self._transport)
+        self.__exit_properties(self._gas, self._condensate, self._transport, exit_value, exit_parameter=exit_parameter)
 
         self.throat_inlet_radius_ratio = throat_inlet_radius_ratio # this value is not needed for sizing but is necessary to find heat tranfer coeff. via bartz
         self.temperature_wall = temperature_wall
@@ -126,6 +154,7 @@ class EngineState:
         # sizes engine
         if  size_value:
             self.size_engine(size_value, size_parameter=size_parameter)
+
 
         # self.engine_state_dict = {'chamber' : self.chamber, 'throat' : self.throat, 'exit' : self.exit }
         self.engine_state = pd.DataFrame([self.chamber, self.throat, self.exit], index=["chamber", "throat", "exit"])
@@ -136,13 +165,13 @@ class EngineState:
     def __str__(self):
         return self.engine_state.to_string()
     
-    def __clone_solution(self, sol: ct.Solution) -> ct.Solution:
-        """Return a deep, independant copy of a Cantera Solution"""
-        new = ct.Solution(thermo=sol.thermo_model, species=sol.species())
-        if sol.transport_model != 'none': 
-            new.transport_model = sol.transport_model
-        new.TPX = sol.T, sol.P, sol.X
-        return new
+    # def __clone_solution(self, sol: ct.Solution) -> ct.Solution:
+    #     """Return a deep, independant copy of a Cantera Solution"""
+    #     new = ct.Solution(thermo=sol.thermo_model, species=sol.species())
+    #     if sol.transport_model != 'none': 
+    #         new.transport_model = sol.transport_model
+    #     new.TPX = sol.T, sol.P, sol.X
+    #     return new
 
     def __get_thermo_derivatives(self, gas, condensate):
         '''
@@ -208,6 +237,7 @@ class EngineState:
             # for i in range():
             #     None
 
+
             # Coefficients for equation 2.58 
             for i in range(gas.n_elements):
                 coeff_matrix[gas.n_elements, i] = np.sum(a_ij[i, :] * moles)
@@ -222,6 +252,7 @@ class EngineState:
 
             # TODO add equation 2.65 (it is for condensed species)
             
+
             # Coefficeints for equation 2.66
             for i in range(gas.n_elements):
                 coeff_matrix[2*gas.n_elements+1, gas.n_elements+1+i] = np.sum(a_ij[i, :] * moles)
@@ -372,13 +403,14 @@ class EngineState:
                             }
         # TODO: implement reacting transport properties
         
-        return properties
+
+        return properties, transport.mole_fraction_dict()
 
     def _heat_flux(self, temperature, pressure, transport_mole_fractions, area, mach, viscosity_exponent = 0.6):
 
         if not self.temperature_wall:
-            print(  "temperature_wall is not defined. If you want heat transfer coeff. try initiating class with temperature wall defined, or " \
-                    "setting [object_name].temperature_wall to chosen value.")
+            # print(  "temperature_wall is not defined. If you want heat transfer coeff. try initiating class with temperature wall defined, or " \
+                    # "setting [object_name].temperature_wall to chosen value.")
             heat_prop = {'heat transfer coefficient': np.nan,
                          'heat flux': np.nan} 
         else: 
@@ -434,21 +466,22 @@ class EngineState:
         therm_prop = self.__get_thermo_properties(gas, condensate, derivatives["dpi_dlnT_P"], derivatives["dlnn_dlnT_P"], derivatives["dlnV_dlnT_P"], derivatives["dlnV_dlnP_T"])
         
         # Finds tranpsort properties
-        transport_prop = self.__get_transport_properties(gas, transport)
+        transport_prop, transport_moles = self.__get_transport_properties(gas, transport)
 
         # Calculate c* per
         char_velocity = (np.sqrt(ct.gas_constant * therm_prop["temperature"] / (therm_prop["molar mass"] * therm_prop["gamma"])) * 
                             np.power(2 / (therm_prop["gamma"] + 1), -(therm_prop["gamma"] + 1) / (2*(therm_prop["gamma"] - 1))))
 
         # velocity and Mach are 0 in a FAC combustor, area ratio, Isp, Ivac, and Cf are not defined at chamber
-        chamber_prop = {"velocity"        : 0, 
-                        "mach"            : 0, 
-                        "area ratio"      : np.nan,
-                        "I_sp"            : np.nan,
-                        "I_vac"           : np.nan,
-                        "c*"              : char_velocity,
-                        "C_f"             : np.nan,
-                        "mole fraction"   : {k:v for k,v in gas.mole_fraction_dict().items() if v > 10e-6}}
+        chamber_prop = {"velocity"                  : 0, 
+                        "mach"                      : 0, 
+                        "area ratio"                : np.nan,
+                        "I_sp"                      : np.nan,
+                        "I_vac"                     : np.nan,
+                        "c*"                        : char_velocity,
+                        "C_f"                       : np.nan,
+                        "mole fraction"             : gas.mole_fraction_dict(),
+                        "mole fraction transport"   : transport_moles}
         
         self.chamber = therm_prop | transport_prop | chamber_prop | derivatives
 
@@ -482,7 +515,7 @@ class EngineState:
         num_iter = 0
         residual = 1
 
-        gas.SPX = chamber["entropy"], pressure_throat, self.chamber_gas.X
+        gas.SPX = chamber["entropy"], pressure_throat, self.chamber["mole fraction"]
  
         while (residual > tolerance_throat and num_iter < max_iter_throat ) :
             num_iter += 1
@@ -509,17 +542,18 @@ class EngineState:
         if num_iter >= max_iter_throat:
             print(f'Warning: Convergance took {num_iter} iterations which exceeds the limit of {max_iter_throat} max iterations. residual is {residual} which exceeds tolerance of {tolerance_throat}.')
         
-        transport_prop = self.__get_transport_properties(gas, transport)
+        transport_prop, transport_moles = self.__get_transport_properties(gas, transport)
         
         # velocity and Mach are the same at throat, area ratio, Isp, Ivac, and Cf are not defined at chamber
-        throat_prop = { "velocity"        : speed_sound, 
-                        "mach"            : 1, 
-                        "area ratio"      : np.nan,
-                        "I_sp"            : np.nan,
-                        "I_vac"           : np.nan,
-                        "c*"              : np.nan,
-                        "C_f"             : np.nan,
-                        "mole fraction"   : {k:v for k,v in gas.mole_fraction_dict().items() if v > 10e-6}}
+        throat_prop = { "velocity"                  : speed_sound, 
+                        "mach"                      : 1, 
+                        "area ratio"                : np.nan,
+                        "I_sp"                      : np.nan,
+                        "I_vac"                     : np.nan,
+                        "c*"                        : np.nan,
+                        "C_f"                       : np.nan,
+                        "mole fraction"             : gas.mole_fraction_dict(),
+                        "mole fraction transport"   : transport_moles}
 
         self.throat = throat_properties | transport_prop | throat_prop | throat_derivatives
 
@@ -549,7 +583,6 @@ class EngineState:
         if exit_parameter == "area ratio":
             exit_properties = self.state_at_area(gas, condensate, transport, exit_value, speed = "supersonic")
             ae_mdot = 1/(exit_properties["density"]*exit_properties["velocity"])
-
             exit_properties["I_sp"] = exit_properties["velocity"] / sp.constants.g
             exit_properties["I_vac"] = exit_properties["velocity"] / sp.constants.g + exit_properties["pressure"] * ae_mdot / sp.constants.g
             exit_properties["C_f"] = exit_properties["velocity"] / self.chamber["c*"]
@@ -558,7 +591,7 @@ class EngineState:
         
         elif exit_parameter == "pressure":
             pressure = exit_value
-            gas.SPX = self.chamber["entropy"], pressure, self.throat_gas.X
+            gas.SPX = self.chamber["entropy"], pressure, self.throat['mole fraction']
             if self.assumption == 'equilibrium': 
                 gas.equilibrate('SP')   
             elif self.assumption == 'frozen':
@@ -579,16 +612,17 @@ class EngineState:
             Ivac = Isp + pressure * ae_mdot / sp.constants.g
             Cf = velocity / self.chamber["c*"]
 
-            transport_prop = self.__get_transport_properties(gas, transport)
+            transport_prop, transport_moles = self.__get_transport_properties(gas, transport)
 
-            exit_prop = {   "velocity"        : velocity, 
-                            "mach"            : velocity/speed_sound, 
-                            "area ratio"      : ae_at,
-                            "I_sp"            : Isp,
-                            "I_vac"           : Ivac,
-                            "c*"              : np.nan,
-                            "C_f"             : Cf,
-                            "mole fraction"   : {k:v for k,v in gas.mole_fraction_dict().items() if v > 10e-6}}
+            exit_prop = {   "velocity"                  : velocity, 
+                            "mach"                      : velocity/speed_sound, 
+                            "area ratio"                : ae_at,
+                            "I_sp"                      : Isp,
+                            "I_vac"                     : Ivac,
+                            "c*"                        : np.nan,
+                            "C_f"                       : Cf,
+                            "mole fraction"             : gas.mole_fraction_dict(),
+                            "mole fraction transport"   : transport_moles}
 
             exit_properties = exit_properties | transport_prop | exit_prop | exit_derivatives
 
@@ -669,8 +703,8 @@ class EngineState:
         self.exit.update(exit_size)
 
         self.chamber.update({'heat transfer coefficient': np.nan,'heat flux': np.nan})
-        self.throat.update(self._heat_flux(self.throat["temperature"],self.throat["pressure"], self.throat_transport.X, self.throat['area'], self.throat['mach']))
-        self.exit.update(self._heat_flux(self.exit["temperature"],self.exit["pressure"], self.exit_transport.X, self.exit['area'], self.exit['mach']))
+        self.throat.update(self._heat_flux(self.throat["temperature"],self.throat["pressure"], self.throat["mole fraction transport"], self.throat['area'], self.throat['mach']))
+        self.exit.update(self._heat_flux(self.exit["temperature"],self.exit["pressure"], self.exit["mole fraction transport"], self.exit['area'], self.exit['mach']))
 
         self.engine_state = pd.DataFrame([self.chamber, self.throat, self.exit], index=["chamber", "throat", "exit"])
             
@@ -762,7 +796,7 @@ class EngineState:
             else:
                 raise ValueError("Assumption must be 'frozen' or 'equilibrium'")
 
-        transport_prop = self.__get_transport_properties(gas, transport)
+        transport_prop, transport_moles = self.__get_transport_properties(gas, transport)
 
         local_prop  = { "velocity"        : velocity, 
                         "mach"            : velocity/speed_sound, 
@@ -912,9 +946,9 @@ class Engine(EngineState):
 
         x_inj = x_c - l_c
 
-        print(f"r_t: {r_t}, r_c: {r_c}, r_tin: {r_tin}, r_nin = {r_nin}")
-        print(f"throat_inlet: {x_tin}, nozzle_inlet: {x_nin}, chamber_end: {x_c}, x_inj: {x_inj}")
-        print(f"volume_throat_inlet: {volume_throat_inlet}, volume_nozzle_line: {volume_nozzle_line}, volume_nozzle_inlet: {volume_nozzle_inlet}, volume_converging: {volume_converging}, volume_chamber: {volume_chamber}, volume_total: {volume_total}")
+        # print(f"r_t: {r_t}, r_c: {r_c}, r_tin: {r_tin}, r_nin = {r_nin}")
+        # print(f"throat_inlet: {x_tin}, nozzle_inlet: {x_nin}, chamber_end: {x_c}, x_inj: {x_inj}")
+        # print(f"volume_throat_inlet: {volume_throat_inlet}, volume_nozzle_line: {volume_nozzle_line}, volume_nozzle_inlet: {volume_nozzle_inlet}, volume_converging: {volume_converging}, volume_chamber: {volume_chamber}, volume_total: {volume_total}")
 
         x_dict = {"x_inj" : 0,  "x_c" : x_c-x_inj, "x_nin" : x_nin-x_inj, "x_tin" : x_tin-x_inj, "x_t" : -x_inj}
 
@@ -974,19 +1008,17 @@ class Engine(EngineState):
             else:
                 raise ValueError(f"x coordinate exceeds bounds of nozzle. please make sure {x_dict['x_inj']} < x <= {x_dict['x_e']}")
 
-        # x_coords = np.linspace(x_dict["x_inj"], x_dict["x_e"], fidelity)
+        x_coords = np.linspace(x_dict["x_inj"], x_dict["x_e"], fidelity)
         x_coords = np.sort(np.append(np.linspace(x_dict["x_inj"], x_dict["x_e"], fidelity), list(x_dict.values())))
         contour_coords = []
-        for x in x_coords: 
-            contour_coords.append([x, contour(x)])
-
-        print(f"r_t: {r_t}, r_tout: {r_tout}")
+        # for x in x_coords: 
+        #     contour_coords.append([x, contour(x)])
 
         self.contour = contour
         self.x_dict = x_dict
         self.contour_coords = contour_coords
 
-        return contour_coords
+        # return contour_coords
 
     def properties_along_contour(self, fidelity):
         stations = np.hstack((0, np.linspace(self.x_dict["x_c"], self.x_dict["x_e"], fidelity, endpoint = True)))
@@ -995,8 +1027,7 @@ class Engine(EngineState):
             idx = np.searchsorted(stations, self.x_dict["x_t"])
             stations = np.insert(stations, idx, self.x_dict["x_t"])
         
-        self._gas.TPX = self.chamber_gas.T, self.chamber_gas.P, self.chamber_gas.X
-
+        self._gas.TPX = self.chamber['temperature'], self.chamber['pressure'], self.chamber['mole fraction'] 
         list_station_properties = []
 
         for station in stations:
@@ -1034,9 +1065,9 @@ class Engine(EngineState):
             else:
                 raise ValueError(f"Invalid station: station must be greater than 0 (injector face) and less that {self.x_dict['x_e']} (nozzle exit) in order to be valid.")
             
-            channel_geom = self.channel_contour(station)
+            # channel_geom = self.channel_contour(station)
 
-            list_station_properties.append(station_properties | channel_geom)
+            list_station_properties.append(station_properties)  # | channel_geom)
 
         self.property_contour = pd.DataFrame(list_station_properties, stations)
 
@@ -1059,8 +1090,6 @@ class Engine(EngineState):
 
         for i, station in enumerate(stations):
             if  n_channels * 2 * np.atan(channel_width[i]/2/(wall_thickness[i]+self.contour(station))) >= 2*np.pi:
-                print(self.contour(station))
-                print(2 * np.atan(channel_width[i]/2/(wall_thickness[i]+self.contour(station))))
                 raise ValueError(  f"Specified channel geometry results in no wall between channels at station: {station}. please reduce channel width or number of channels")
             
             if not 0 <= station and stations <= self.x_dict["x_e"]:
@@ -1082,7 +1111,6 @@ class Engine(EngineState):
                     t = wall_thickness[i-1] + (x-stations[i-1]) * (wall_thickness[i]-wall_thickness[i-1]) / (stations[i]-stations[i-1])
                     h = channel_height[i-1] + (x-stations[i-1]) * (channel_height[i]-channel_height[i-1]) / (stations[i]-stations[i-1])
                     w = channel_width[i-1] + (x-stations[i-1]) * (channel_width[i]-channel_width[i-1]) / (stations[i]-stations[i-1])
-                    print(f"r {r} t {t} h {h} w {w}")
                     return {'chamber wall'    : t,
                             'channel height'    : h, 
                             'channel width'     : w, 
@@ -1101,61 +1129,7 @@ class Engine(EngineState):
                 raise ValueError(f"Invalid x value {x} for the channel contour, all values must be between 0 and {self.x_dict['x_e']}")    
 
         self.n_channels = n_channels
-        self.channel_contour = channel_countour
-
-    def Regen_design(self, station, density_coolant, viscosity_coolant, conductivity_coolant, cp_coolant, channel_roughness, conductivity_wall, fidelity):
-
-        wall_chamber, h, w, wall_channel = self.channel_contour(station).values()
-        dx = self.x_dict['x_e'] / fidelity
-
-        ### coolant convection ###
-        rho = density_coolant
-        mu = viscosity_coolant
-        mdot = 1 / (self._of_ratio +1) * self.throat['mass flow']
-        area_channel = self.contour(station)**2 * np.pi
-        v = mdot / (rho * area_channel)
-        Dh = (4*h*w)/(2*(h+w))
-        eD = channel_roughness / Dh
-        Re = rho * v * Dh / mu
-        f = fluids.friction.Clamond(Re, eD)
-
-        # define B
-        epsilon_star = Re * eD * (f/8)**0.5
-        if epsilon_star < 7:
-            Bcoef = 4.5* 0.57* epsilon_star**0.75
-        elif epsilon_star >= 7:
-            Bcoef =  4.5 * epsilon_star**0.2
-        
-        Pr = viscosity_coolant * cp_coolant / conductivity_coolant
-        zeta = f / fluids.friction.Clamond(Re, 0)
-
-        c_1 = (1+ 1.5 * Pr**(-1/6) * Re**(-1/8)*(Pr-1) *zeta) / (1+ 1.5 * Pr**(-1/6) * Re**(-1/8)*(Pr * zeta -1))
-
-        # TODO: self.x_dict['x_e'] - station is just a substitute for length travelled by coolant must be replaced.
-        c_2 = 1 + ((self.x_dict['x_e'] - station)/Dh)**(-0.7) * (T_cw/ T_coolant)**0.1 
-        
-        # define C_3
-        if self.x_dict['x_c'] <= station and station <= self.x_dict['x_nin']:
-            c_3 = (Re * (0.25 * Dh / self._r_nin)**2)**(-0.05)
-        elif self.x_dict['x_tin'] <= station and station <= self.x_dict['x_t']:
-            c_3 = (Re * (0.25 * Dh / self._r_tin)**2)**(+0.05)
-        elif self.x_dict['x_t'] <= station and station <= self.x_dict['x_tout']:
-            c_3 = (Re * (0.25 * Dh / self._r_tin)**2)**(+0.05)
-        else:
-            c_3 = 1
-
-        Nu = (f/8 * Re * Pr * (T_coolant/T_cw)**0.55)/(1 + (f/8)**0.55 * (Bcoef- 8.48)) * c_1 * c_2 * c_3
-
-        h_coolant = Nu * Dh / conductivity_coolant
-
-        ### Conduction ###
-        k_wall = conductivity_wall
-        L_c = h + wall_channel / 2
-        m = np.sqrt(2* h_coolant / k_wall / wall_channel)
-        eta_fin  = np.tanh(m*L_c)/ (m*L_c)
-
-        A_coolant = (2 * eta_fin * h + w) * dx
-        A_gas = 2* np.pi* self.contour(station) * dx / self.n_channels
+        # self.channel_contour = channel_countour
 
 def chemistry_initializer(oxidizer, fuel, temp_oxidizer=None, temp_fuel=None, combustion_products=None):
     propellant_array = [['oxidizer', oxidizer, temp_oxidizer],['fuel', fuel, temp_fuel]]
@@ -1233,14 +1207,282 @@ def chemistry_initializer(oxidizer, fuel, temp_oxidizer=None, temp_fuel=None, co
 
     return propellant['oxidizer'], propellant['fuel'], gas, condensate, transport
 
-def ranged_sim_rocketcow(oxidizer, fuel, of_arr, p_arr, exit_value, gas, condensate = None, transport = None, size_value=None, size_parameter ="thrust", exit_parameter="pressure"):
+@st.cache_data
+def ranged_sim_rocketcow(ox, f, t_ox, t_fuel, of_arr, p_arr, exit_value, size_value=None, size_parameter ="thrust", exit_parameter="pressure", assumption = 'Equilibrium'):
+    oxidizer, fuel, gas, condensate, transport = chemistry_initializer(ox, f, temp_oxidizer=t_ox, temp_fuel=t_fuel)
     state_list = []
     for pressure in p_arr:
         for of_ratio in of_arr:
             state = Engine(oxidizer, fuel, of_ratio, pressure, exit_value, gas, size_value, condensate=condensate, transport=transport, size_parameter=size_parameter,
-                           exit_parameter=exit_parameter)
+                           exit_parameter=exit_parameter, assumption=assumption, temperature_wall=500)
             state_list.append(state())
     states = pd.concat(state_list, keys = list(range(len(state_list))))
+    states.drop(columns=['mole fraction', 'mole fraction transport', 'dpi_dlnT_P', 'dpi_dlnP_T'])
     return states
 
+@st.cache_data
+def data_filter(df, pos, var):
+    core = df.loc[pd.IndexSlice[:, 'chamber'], ['of ratio', 'pressure']]
+    core.index = core.index.droplevel(1)
+    param = df.loc[pd.IndexSlice[:, pos], var]
+    param.index = param.index.droplevel(1)
+    core[var] = param
+    core['pressure'] = core['pressure'].round(3)
+    output = pd.pivot(core, index= 'pressure',  columns = 'of ratio')
+    output = output.iloc[::-1]
+    output = output.droplevel(0, 1)
+    output.index.name = None
+    output.columns.name = None
+    output.columns = ['{:.1f}'.format(x) for x in output.columns.round(2)]
+    output.attrs = core.attrs
+    return output
 
+@st.cache_data
+def gen_plot(df, pos, var, _plot_type = 'heatmap'): 
+    data_filtered = data_filter(df, pos, var)
+    unit_dict = {'temperature': '(K)', 'density': 'kg/m^3', 'specific volume': 'm^3/kg', 'enthalpy': 'J/kg', 'internal energy': 'J/kg', 
+                 'gibbs': 'J/kg', 'entropy' : 'J/kg/K', 'molar mass' : 'kg/kmol', 'c_p' : 'J/kg/K','c_v' : 'J/kg/K', 'gamma' : '', 
+                 'gamma_s' : '', 'speed sound' : '(m/s)', 'viscosity' : '(Pa*s)','thermal conductivity': 'W/m/K', 'prandtl number' : '', 
+                 'velocity' : '(m/s)', 'mach' : '','area ratio' : '', 'I_sp' : '(s)', 'I_vac' : '(s)', 'c*' : '(m/s)', 'C_f' : '', 
+                 'thrust' : '(N)', 'mass flow' : 'kg/s','area' : 'm^2', 'diameter' : 'm', 'heat transfer coefficient' : 'W/m^2/K', 
+                 'heat flux' : 'W/m^2'}
+    if _plot_type == 'heatmap': 
+        fig = px.imshow(data_filtered, width=600, height=600, origin='lower', color_continuous_scale='viridis', 
+                        labels={"x": "OF Ratio (% weight)", "y": "Pressure (Pa)", "hover": f"{var} {unit_dict[var]}",'color': f"{var} {unit_dict[var]}"}, 
+                        title="{} at the {}".format(var, pos), aspect="auto")
+    elif _plot_type == 'surface':
+        surface = go.Surface(z=data_filtered.values, x = data_filtered.columns.values , y = data_filtered.index.values, colorscale = 'Viridis')
+        fig = go.Figure(data = [surface])
+        fig.update_layout(xaxis=dict(title = dict(text="OF Ratio (% weight)")),
+                          yaxis=dict(title = dict(text="Pressure (Pa)")),
+                          zaxis=dict(title = dict(text=f"{var} {unit_dict[var]}")),)
+    else: 
+        raise Exception('invalid plot type, options are \'heatmap\' or \'surface\'')
+    
+    return fig, data_filtered
+
+@st.cache_data
+def convert_df(df):
+    return df.to_csv().encode('utf-8')
+
+@st.cache_data
+def contour_design( ox, f, t_ox, t_fuel, of, pressure, pressure_exit, thrust, length_value, contraction_ratio, contraction_angle=30, nozzle_inlet_radius_ratio=0.5, throat_inlet_radius_ratio = None, 
+                    length_parameter = 'characteristic length', throat_outlet_radius_ratio=0.382, expansion_angle=15, temperature_wall=500, fidelity = 200):
+    oxidizer, fuel, gas, condensate, transport = chemistry_initializer(ox, f, temp_oxidizer=t_ox, temp_fuel=t_fuel)
+    da_engine = Engine(oxidizer, fuel, of, pressure, pressure_exit, gas, thrust, condensate=condensate, transport=transport)
+    da_engine.conical_contour(length_value, contraction_ratio, contraction_angle=contraction_angle, nozzle_inlet_radius_ratio=nozzle_inlet_radius_ratio, throat_inlet_radius_ratio = throat_inlet_radius_ratio, 
+                                length_parameter = length_parameter, throat_outlet_radius_ratio=throat_outlet_radius_ratio, expansion_angle=expansion_angle, fidelity = fidelity)
+    properties = da_engine.properties_along_contour(fidelity)
+    properties.drop(columns=['mole fraction', 'mole fraction transport', 'dpi_dlnT_P', 'dpi_dlnP_T'])
+    return properties
+
+@st.cache_data
+def contour_plot(contour, var1, var2, var3, var4):
+    fig = go.Figure()
+    fig.update_layout(xaxis=dict(title = dict(text="Axial distance (m)"), domain=[0, 0.9]), 
+                    title_text="Properties along Engine contour")
+    unit_dict = {'temperature': '(K)', 'density': 'kg/m^3', 'specific volume': 'm^3/kg', 'enthalpy': 'J/kg', 'internal energy': 'J/kg', 
+                 'gibbs': 'J/kg', 'entropy' : 'J/kg/K', 'molar mass' : 'kg/kmol', 'c_p' : 'J/kg/K','c_v' : 'J/kg/K', 'gamma' : '', 
+                 'gamma_s' : '', 'speed sound' : '(m/s)', 'viscosity' : '(Pa*s)','thermal conductivity': 'W/m/K', 'prandtl number' : '', 
+                 'velocity' : '(m/s)', 'mach' : '','area ratio' : '', 'I_sp' : '(s)', 'I_vac' : '(s)', 'c*' : '(m/s)', 'C_f' : '', 
+                 'thrust' : '(N)', 'mass flow' : 'kg/s','area' : 'm^2', 'diameter' : 'm', 'heat transfer coefficient' : 'W/m^2/K', 
+                 'heat flux' : 'W/m^2', 'pressure' : 'Pa'}
+    fig.add_trace(go.Scatter(x = contour.index, y = contour['diameter']/2, name= f"radius (m)"))
+
+    for i, prop in enumerate([var1, var2, var3, var4]): 
+        fig.add_trace(go.Scatter(x = contour.index, y = contour[prop], name= f"{var1} {unit_dict[var1]}", yaxis=f"y{i+2}"))
+
+    fig.update_layout(yaxis=dict(title=dict(text="Radius (m)"),side="right", rangemode='tozero',position=0.9, automargin = True),
+                    yaxis2=dict(title=dict(text=f"{var1} {unit_dict[var1]}"),overlaying="y"),
+                    yaxis3=dict(title=dict(text=f"{var2} {unit_dict[var2]}"),anchor="free",overlaying="y",autoshift=True),
+                    yaxis4=dict(title=dict(text=f"{var3} {unit_dict[var3]}"),anchor="free",overlaying="y",autoshift=True),
+                    yaxis5=dict(title=dict(text=f"{var4} {unit_dict[var4]}"),anchor="free",overlaying="y",autoshift=True))
+    return fig
+
+### Creates the UI ###
+st.header('Rocket Cow Engine Visualizer')
+st.write('''Welcome to V0.1 of the :rainbow[Rocket Cow\u2122]. V0.1 is capable of plotting engine properties over a 
+         range of pressures and OF ratios, calculating gas side heat transfer, designing an engine contour (with a 
+         conical nozzle) and plotting properties along that contour. Rocket Cow uses Cantera along with the methodology 
+         laid out in NASA CEA to find engine properties. Please note some functionality is hidden and only available 
+         via script. this UI is just a demo, if there are any bugs or requests please create an issue on github.''')
+
+with st.form('OF ratio & Pressure Trade'):
+    # Prop input
+    st.subheader("Propellants")
+    col1, col2 = st.columns(2)
+    col1.selectbox('Fuel:', ['CH4(L)', 'RP-1(L)', 'H2(L)', 'C2H5OH(L)', 'C3H8(L)'], key='fuel')
+    col1.number_input('Fuel Temperature (K):', key= 'temp_fuel', min_value= 0.0, value=None, step=5.0, placeholder="Optional")
+    col2.selectbox('Oxidizer:',['O2(L)', 'N2O(L)', 'Air(g)'], key='ox')
+    col2.number_input('Oxidizer Temperature (K):', key= 'temp_ox', min_value= 0.0, value=None, step=5.0, placeholder="Optional")
+    
+    # Pressure input
+    st.divider()
+    st.subheader("Pressure")
+
+    col1, col2, col3 = st.columns([0.38,0.38,0.24   ])
+    col1.number_input('Min Chamber Pressure (bar):', key='p_min', min_value=0.0, value=10.0, step=5.0)
+    col2.number_input('Max Pressure (bar):', key='p_max', min_value = 0.0, value = 100.0,  step = 5.0)
+    col3.number_input('Step Size (bar):', key='p_step', min_value=0.01, value = 10.0, step = 1.0)  
+
+    st.number_input('Ambient Pressure (bar):', key='p_e', min_value=0.0 ,value=1.0 ,step=0.1)
+
+    # OF conditions
+    st.divider()
+    st.subheader("OF Ratio")
+    
+    col1, col2, col3 = st.columns(3)
+    col1.number_input('Min OF (%wt ratio):', key='of_min', min_value = 0.01, value = 1.5, step=0.1)
+    col2.number_input('Max OF (%wt ratio):', key='of_max', min_value = 0.01, value = 4.5,  step = 0.1)
+    col3.number_input('Step Size (%wt ratio):', key='of_step', min_value = 0.0001, value= 0.2, step= 0.05)
+    
+    # Thrust
+    st.divider()
+    st.subheader("Thrust")
+    st.number_input('Thrust (N):', key='thrust', min_value=0.0 ,value=5000.0 ,step=0.1)
+    
+    # sim type and run
+    st.divider()  
+    st.subheader("Assumptions")
+    st.selectbox('reacting flow condition', ['equilibrium', 'frozen'    ], key='assume')
+    st.form_submit_button('Run', use_container_width = True, on_click=run_button)
+
+if state.run_button:
+    
+    if(state.p_min > state.p_max):
+        st.warning('Your minimum pressure is greater than your maximum pressure! Adjust and rerun.', icon="⚠️")
+        st.stop()
+    if(state.p_min < state.p_e):
+        st.warning('Your your exit pressure exceeds your minimum pressure! Your chamber pressure must always exceed ambient pressure. Adjust and rerun.', icon="⚠️")
+        st.stop()
+    if(state.p_step > (state.p_max-state.p_min)):
+        st.warning('Your pressure step size is greater than your pressure range! Adjust and rerun', icon="⚠️")
+        st.stop()
+
+    if(state.of_min > state.of_max):
+        st.warning('Your minimum OF ratio is greater than your maximum OF ratio! Adjust and rerun', icon="⚠️")
+        st.stop()
+    if(state.of_step > (state.p_max-state.p_min)):
+        st.warning('Your OF ratio step size is greater than your OF ratio range! Adjust and rerun', icon="⚠️")
+        st.stop()
+    if(state.of_step > (state.p_max-state.p_min)):
+        st.warning('Your OF ratio step size is greater than your OF ratio range! Adjust and rerun', icon="⚠️")
+        st.stop()
+
+    state.data = ranged_sim_rocketcow(state.ox, state.fuel, state.temp_ox, state.temp_fuel, list(np.arange(state.of_min, state.of_max, state.of_step)), 
+                                    list(np.arange(state.p_min*1e5,state.p_max*1e5, state.p_step*1e5)), state.p_e*1e5, size_value=state.thrust, assumption=state.assume)
+    
+    st.header('OF ratio and Pressure trade Results')
+    if st.checkbox('Show raw data'):
+        st.subheader('Raw data')
+        st.write(state.data)
+        csv = convert_df(state.data)
+        st.download_button("Press to Download", csv, "file.csv", "text/csv", key='download-csv')
+
+    st.subheader('Visualization')
+    col1, col2, col3 = st.columns(3)
+    with col1:
+        st.selectbox('Position:', ['chamber', 'throat', 'exit'], key='plot_pos')
+
+    with col2:
+        st.selectbox('Variable:', [ 'temperature', 'density', 'specific volume',
+                                    'enthalpy', 'internal energy', 'gibbs', 'entropy', 'molar mass', 'c_p',
+                                    'c_v', 'gamma', 'gamma_s', 'speed sound', 'viscosity',
+                                    'thermal conductivity', 'prandtl number', 'velocity', 'mach',
+                                    'area ratio', 'I_sp', 'I_vac', 'c*', 'C_f', 'thrust', 'mass flow',
+                                    'area', 'diameter', 'heat transfer coefficient', 'heat flux'], key='plot_var')
+
+    with col3:
+        st.selectbox('Plot Type:', ['heatmap', 'surface'], key='plot_type')
+    
+    st.button('Plot', use_container_width=True, on_click=plot_button)
+
+    if state.plot_button:
+        state.figure, state.data_filtered = gen_plot(state.data, state.plot_pos, state.plot_var, _plot_type=state.plot_type)
+        st.plotly_chart(state.figure)
+
+        if st.checkbox('Show plotted data'):
+            st.subheader('Plotted data')
+            st.dataframe(state.data_filtered)
+            csv = convert_df(state.data_filtered)
+            st.download_button("Press to Download", csv, "file.csv", "text/csv")  
+
+        with st.form('Engine Design'):            
+            # Pressure input
+            st.subheader("Engine Conditions")
+
+            col1, col2= st.columns([0.5,0.5])
+            col1.number_input('Chamber Pressure (bar):', key='pressure', min_value=0.0, value=100.0, step=5.0)
+            col2.number_input('OF ratio (% weight)', key='of_ratio', min_value = 0.0, value = 3.0,  step = .1)
+            st.number_input('Thrust (N):', key='engine_thrust', min_value=0.0 ,value=5000.0 ,step=0.1)
+            st.number_input('Ambient Pressure (bar):', key='pressure_exit', min_value=0.0 ,value=1.0 ,step=0.1)
+
+            # OF conditions
+            st.divider()
+            st.subheader("Engine Geometry")
+            col1, col2 = st.columns(2)
+            col1.selectbox('Length parameter', ['characteristic length', 'chamber length'], key='length_param')
+            col2.number_input('length (m):', key='length', min_value=0.0 ,value=0.9 , step=0.1)
+            col1, col2, col3 = st.columns(3)
+            col1.number_input('contraction ratio:', key='contraction_ratio', min_value = 1.0001, value = 2.0, step=0.1)
+            col2.number_input('contraction angle (deg):', key='contraction_angle', min_value = 1.0, value = 30.0, max_value=89.0,  step = 1.0)
+            col3.number_input('expansion angle (deg):', key='expansion_angle', min_value = 1.0, value= 15.0, max_value=89.0, step= 1.0)
+            col1, col2, col3 = st.columns(3)
+            col1.number_input('nozzle inlet radius ratio:', key='nin_ratio', min_value = 0.01, value = 0.5, max_value=1.0, step=0.1)
+            col2.number_input('throat inlet radius ratio:', key='tin_ratio', min_value = 0.01, value = 1.5,  step = 0.1)
+            col3.number_input('throat outlet radius ratio:', key='tout_ratio', min_value = 0.01, value= 0.382, step= 0.1)
+
+
+            # Fidelity
+            st.divider()
+            st.subheader("Fidelity")
+            st.number_input('Number of Stations:', key='fidelity', min_value = 5, value=200, step= 1)
+            st.form_submit_button('Run', use_container_width = True, on_click=contour_button)
+
+        if state.contour_button:
+
+            state.contour_properties = contour_design(  state.ox, state.fuel, state.temp_ox, state.temp_fuel, state.of_ratio, state.pressure, 
+                                                        state.pressure_exit, state.engine_thrust, state.length, state.contraction_ratio, 
+                                                        contraction_angle=state.contraction_angle, nozzle_inlet_radius_ratio=state.nin_ratio, 
+                                                        throat_inlet_radius_ratio = state.tin_ratio, length_parameter = state.length_param, 
+                                                        throat_outlet_radius_ratio=state.tout_ratio, expansion_angle=state.expansion_angle, 
+                                                        temperature_wall=500, fidelity = state.fidelity)
+
+            st.header('Properties Along contour')
+            if st.checkbox('Show raw data', key="contour_check"):
+                st.subheader('Raw data')
+                st.write(state.contour_properties)
+                csv = convert_df(state.contour_properties)
+                st.download_button("Press to Download", csv, "file.csv", "text/csv", key='download-csv-contour')
+            
+            col1, col2 = st.columns(2)
+            col1.selectbox('Variable:', [ 'temperature', 'pressure', 'density', 'specific volume',
+                                    'enthalpy', 'internal energy', 'gibbs', 'entropy', 'molar mass', 'c_p',
+                                    'c_v', 'gamma', 'gamma_s', 'speed sound', 'viscosity',
+                                    'thermal conductivity', 'prandtl number', 'velocity', 'mach',
+                                    'area ratio', 'I_sp', 'I_vac', 'c*', 'C_f', 'thrust', 'mass flow',
+                                    'area', 'diameter', 'heat transfer coefficient', 'heat flux'], key='first')
+            
+            col2.selectbox('Variable:', [ 'velocity','temperature', 'pressure', 'density', 'specific volume',
+                                    'enthalpy', 'internal energy', 'gibbs', 'entropy', 'molar mass', 'c_p',
+                                    'c_v', 'gamma', 'gamma_s', 'speed sound', 'viscosity',
+                                    'thermal conductivity', 'prandtl number' , 'mach',
+                                    'area ratio', 'I_sp', 'I_vac', 'c*', 'C_f', 'thrust', 'mass flow',
+                                    'area', 'diameter', 'heat transfer coefficient', 'heat flux'], key='second')
+            col1, col2 = st.columns(2)
+            col1.selectbox('Variable:', [ 'pressure','temperature', 'density', 'specific volume',
+                                    'enthalpy', 'internal energy', 'gibbs', 'entropy', 'molar mass', 'c_p',
+                                    'c_v', 'gamma', 'gamma_s', 'speed sound', 'viscosity',
+                                    'thermal conductivity', 'prandtl number', 'velocity', 'mach',
+                                    'area ratio', 'I_sp', 'I_vac', 'c*', 'C_f', 'thrust', 'mass flow',
+                                    'area', 'diameter', 'heat transfer coefficient', 'heat flux'], key='third')
+            
+            col2.selectbox('Variable:', ['heat transfer coefficient',  'temperature', 'pressure', 'density', 'specific volume',
+                                    'enthalpy', 'internal energy', 'gibbs', 'entropy', 'molar mass', 'c_p',
+                                    'c_v', 'gamma', 'gamma_s', 'speed sound', 'viscosity',
+                                    'thermal conductivity', 'prandtl number', 'velocity', 'mach',
+                                    'area ratio', 'I_sp', 'I_vac', 'c*', 'C_f', 'thrust', 'mass flow',
+                                    'area', 'diameter', 'heat flux'], key='fourth')
+            
+            state.contour_fig = contour_plot(state.contour_properties, state.first, state.second, state.third, state.fourth)
+            st.plotly_chart(state.contour_fig)
