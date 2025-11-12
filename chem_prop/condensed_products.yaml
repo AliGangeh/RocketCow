@@ -1960,23 +1960,6 @@ species:
     data:
     - [0.0, 0.0, 16.10293331, 0.0, 0.0, 0.0, 0.0, -4.84918354e+04, -67.11333581]
     note: Pankratz,1984 p228. Stuve,1980. [g12/00]
-- name: Fe.947O(cr)
-  composition: {O: 1}
-  thermo:
-    model: NASA9
-    temperature-ranges: [298.15, 1652.0]
-    data:
-    - [-1.179193966e+04, 138.8393372, 2.999841854, 0.0127452721, -1.883886065e-05,
-      1.274258345e-08, -3.042206479e-12, -3.4173505e+04, -12.8475912]
-    note: Wustite. Pankratz,1983 p155. [g11/00]
-- name: Fe.947O(L)
-  composition: {O: 1}
-  thermo:
-    model: NASA9
-    temperature-ranges: [1652.0, 6000.0]
-    data:
-    - [0.0, 0.0, 8.147077819, 0.0, 0.0, 0.0, 0.0, -3.25508065e+04, -39.95344357]
-    note: Wustite Liquid. Pankratz,1983 p155. [g11/00]
 - name: FeOCL(cr)
   composition: {Fe: 1, O: 1, Cl: 1}
   thermo:
