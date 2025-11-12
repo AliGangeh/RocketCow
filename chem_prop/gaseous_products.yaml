@@ -50,12 +50,8 @@ units: {length: cm, time: s, quantity: mol, activation-energy: cal/mol}
 
 species:
 - name: e-
-<<<<<<< HEAD
   composition: {}
   charge: 1
-=======
-  composition: {E: 1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -86,12 +82,8 @@ species:
       1.35885673e-11, -1.272610104e-16, -2.107724971e+06, 662.837457]
     note: Hf:Cox,1989. Moore,1971. Gordon,1999. [g10/97]
 - name: Ag+
-<<<<<<< HEAD
   composition: {Ag: 1}
   charge: 1
-=======
-  composition: {Ag: 1, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -105,12 +97,8 @@ species:
       227.1702823]
     note: Moore,1971. Gordon,1999. [g10/97]
 - name: Ag-
-<<<<<<< HEAD
   composition: {Ag: 1}
   charge: -1
-=======
-  composition: {Ag: 1, E: 1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -133,12 +121,8 @@ species:
       3.5921109e-11, -4.696039394e-16, -2.901050501e+06, 949.188316]
     note: Hf:Cox,1989. Kaufman,1991b. Gordon,1999. [g12/97]
 - name: Al+
-<<<<<<< HEAD
   composition: {Al: 1}
   charge: 1
-=======
-  composition: {Al: 1, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -150,12 +134,8 @@ species:
       2.71938107e-11, -3.367986284e-16, -4.26869302e+06, 1141.245444]
     note: Kaufman,1991b. Moore,1971. Gordon,1999. [g 1/98]
 - name: Al-
-<<<<<<< HEAD
   composition: {Al: 1}
   charge: -1
-=======
-  composition: {Al: 1, E: 1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -234,12 +214,8 @@ species:
       1.182380673e-10, -6.66049813e-15, -2.496164448e+04, 26.1692548]
     note: Gurvich,1996a pt1 p168 pt2 p131. [tpis96]
 - name: AlCl+
-<<<<<<< HEAD
   composition: {Al: 1, Cl: 1}
   charge: 1
-=======
-  composition: {Al: 1, Cl: 1, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0]
@@ -283,12 +259,8 @@ species:
       6.1538044e-11, -2.945403999e-15, -4.54072896e+04, 16.13163743]
     note: Gurvich,1996a pt1 p151 pt2 p116. [tpis96]
 - name: AlF+
-<<<<<<< HEAD
   composition: {Al: 1, F: 1}
   charge: 1
-=======
-  composition: {Al: 1, F: 1, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0]
@@ -332,12 +304,8 @@ species:
       1.472534201e-11, -8.8036953e-16, -7.88400268e+04, -7.915370474]
     note: Gurvich,1996a pt1 p153 pt2 p117. [tpis96]
 - name: AlF2-
-<<<<<<< HEAD
   composition: {Al: 1, F: 2}
   charge: -1
-=======
-  composition: {Al: 1, F: 2, E: 1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0]
@@ -370,12 +338,8 @@ species:
       -2.181058411e-12, 1.009055287e-16, -1.475694276e+05, -27.03983244]
     note: Gurvich,1996a pt1 p157 pt2 p120. [tpis96]
 - name: AlF4-
-<<<<<<< HEAD
   composition: {Al: 1, F: 4}
   charge: -1
-=======
-  composition: {Al: 1, F: 4, E: 1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0]
@@ -553,12 +517,8 @@ species:
       6.68894029e-14, -8.9986737e-18, 2.957786517e+05, -94.27715804]
     note: Gurvich,1996a pt1 p122 pt2 p96. [tpis96]
 - name: AlO+
-<<<<<<< HEAD
   composition: {Al: 1, O: 1}
   charge: 1
-=======
-  composition: {Al: 1, O: 1, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0]
@@ -569,12 +529,8 @@ species:
       -2.655281004e-11, 1.28312966e-15, 1.218682226e+05, -7.05103588]
     note: Chase,1998 p133. [j12/79]
 - name: AlO-
-<<<<<<< HEAD
   composition: {Al: 1, O: 1}
   charge: -1
-=======
-  composition: {Al: 1, O: 1, E: 1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0]
@@ -629,12 +585,8 @@ species:
       -2.122974022e-12, 9.8193191e-17, -9.52180419e+04, -25.22534812]
     note: Gurvich,1996a pt1 p164 pt2 p124. [tpis96]
 - name: AlOF2-
-<<<<<<< HEAD
   composition: {Al: 1, O: 1, F: 2}
   charge: -1
-=======
-  composition: {Al: 1, O: 1, F: 2, E: 1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0]
@@ -711,12 +663,8 @@ species:
       4.0148977e-14, -3.51570252e-16, -2033.107586, -17.15063884]
     note: Gurvich,1996a pt1 p126 pt2 p99. [tpis96]
 - name: AlO2-
-<<<<<<< HEAD
   composition: {Al: 1, O: 2}
   charge: -1
-=======
-  composition: {Al: 1, O: 2, E: 1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0]
@@ -870,12 +818,8 @@ species:
       -1.355444579e-12, 6.28732389e-17, -1.947580149e+04, -14.15764167]
     note: Gurvich,1996a pt1 p129 pt2 p101. [tpis96]
 - name: Al2O+
-<<<<<<< HEAD
   composition: {Al: 2, O: 1}
   charge: 1
-=======
-  composition: {Al: 2, O: 1, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0]
@@ -897,12 +841,8 @@ species:
       -3.49619392e-12, 1.622305079e-16, -4.96305578e+04, -29.4653809]
     note: Gurvich,1996a pt1 p131 pt2 p102. [tpis96]
 - name: Al2O2+
-<<<<<<< HEAD
   composition: {Al: 2, O: 2}
   charge: 1
-=======
-  composition: {Al: 2, O: 2, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0]
@@ -967,12 +907,8 @@ species:
     rotational-relaxation: 0.0
     note: Kee et al., “A FORTRAN COMPUTER CODE PACKAGE FOR THE EVALUATION OF GAS-PHASE, MULTICOMPONENT TRANSPORT PROPERTIES.”
 - name: Ar+
-<<<<<<< HEAD
   composition: {Ar: 1}
   charge: 1
-=======
-  composition: {Ar: 1, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -998,12 +934,8 @@ species:
       3.23351909e-12, -1.824076527e-18, -1.802904743e+06, 443.961764]
     note: Martin,J.M.L.,1998. Odintzova,1979. Gordon,1999. [g 9/98]
 - name: B+
-<<<<<<< HEAD
   composition: {B: 1}
   charge: 1
-=======
-  composition: {B: 1, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -1016,12 +948,8 @@ species:
       1.484174716e-11, -1.328323987e-16, -3.60911696e+06, 949.739975]
     note: Moore,1971. IP:Moore,1970a. Gordon,1999. [g 9/98]
 - name: B-
-<<<<<<< HEAD
   composition: {B: 1}
   charge: -1
-=======
-  composition: {B: 1, E: 1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -1100,12 +1028,8 @@ species:
       9.84900203e-11, -6.46881817e-15, 1.91272648e+04, 5.235317877]
     note: Gurvich,1996a pt1 p73 pt2 p51. [g 9/98]
 - name: BCl+
-<<<<<<< HEAD
   composition: {B: 1, Cl: 1}
   charge: 1
-=======
-  composition: {B: 1, Cl: 1, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0]
@@ -1149,12 +1073,8 @@ species:
       -2.501151018e-11, 8.72295456e-16, 568.290944, -21.48348344]
     note: Gurvich,1996a pt1 p74 pt2 p52. [tpis96]
 - name: BCl2+
-<<<<<<< HEAD
   composition: {B: 1, Cl: 2}
   charge: 1
-=======
-  composition: {B: 1, Cl: 2, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0]
@@ -1262,12 +1182,8 @@ species:
       -6.11879794e-12, 2.839984178e-16, -5.79622217e+04, -16.55644047]
     note: Gurvich,1996a pt1 p58 pt2 p37. [tpis96]
 - name: BF2+
-<<<<<<< HEAD
   composition: {B: 1, F: 2}
   charge: 1
-=======
-  composition: {B: 1, F: 2, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0]
@@ -1278,12 +1194,8 @@ species:
       5.73253381e-12, -3.21635423e-16, 3.90874505e+04, -19.36560315]
     note: Chase,1998 p211. [j12/70]
 - name: BF2-
-<<<<<<< HEAD
   composition: {B: 1, F: 2}
   charge: -1
-=======
-  composition: {B: 1, F: 2, E: 1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0]
@@ -1327,12 +1239,8 @@ species:
       -1.03305736e-11, 4.78055183e-16, -1.323136863e+05, -37.3838608]
     note: Gurvich,1996a pt1 p62 pt2 p39. [tpis96]
 - name: BF4-
-<<<<<<< HEAD
   composition: {B: 1, F: 4}
   charge: -1
-=======
-  composition: {B: 1, F: 4, E: 1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0]
@@ -1545,12 +1453,8 @@ species:
       302.6123907]
     note: Gurvich,1996a pt1 p10 pt2 p8. [g 9/98]
 - name: BO-
-<<<<<<< HEAD
   composition: {B: 1, O: 1}
   charge: -1
-=======
-  composition: {B: 1, O: 1, E: 1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0]
@@ -1627,12 +1531,8 @@ species:
       8.15836676e-12, -7.52751966e-16, -3.42356402e+04, -22.24772278]
     note: Gurvich,1996a pt1 p14 pt2 p11. [g10/97]
 - name: BO2-
-<<<<<<< HEAD
   composition: {B: 1, O: 2}
   charge: -1
-=======
-  composition: {B: 1, O: 2, E: 1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0]
@@ -2044,12 +1944,8 @@ species:
       -3.38066231e-11, 4.72739054e-16, 2.25033526e+06, -796.844441]
     note: Gurvich,1996a. Moore,1971. Moore,1970a. Gordon,1999. [g10/97]
 - name: Ba+
-<<<<<<< HEAD
   composition: {Ba: 1}
   charge: 1
-=======
-  composition: {Ba: 1, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -2095,12 +1991,8 @@ species:
       -2.910607065e-10, 1.632658438e-14, -2.779173737e+04, -3.574185216]
     note: Gurvich,1996a pt1 p570 pt2 p433. [tpis96]
 - name: BaCl+
-<<<<<<< HEAD
   composition: {Ba: 1, Cl: 1}
   charge: 1
-=======
-  composition: {Ba: 1, Cl: 1, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0]
@@ -2133,12 +2025,8 @@ species:
       -3.2877343e-10, 1.647896238e-14, 3571.78068, -66.6239092]
     note: Gurvich,1996a pt1 p562 pt2 p429. [tpis96]
 - name: BaF+
-<<<<<<< HEAD
   composition: {Ba: 1, F: 1}
   charge: 1
-=======
-  composition: {Ba: 1, F: 1, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0]
@@ -2207,12 +2095,8 @@ species:
       206.7297489]
     note: Gurvich,1996a pt1 p550 pt2 p419. [tpis96]
 - name: BaO+
-<<<<<<< HEAD
   composition: {Ba: 1, O: 1}
   charge: 1
-=======
-  composition: {Ba: 1, O: 1, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -2236,12 +2120,8 @@ species:
       -2.180478542e-10, 1.084610688e-14, 2.393550647e+04, -74.9070579]
     note: Gurvich,1996a pt1 p557 pt2 p425. [tpis96]
 - name: BaOH+
-<<<<<<< HEAD
   composition: {Ba: 1, O: 1, H: 1}
   charge: 1
-=======
-  composition: {Ba: 1, O: 1, H: 1, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0]
@@ -2298,12 +2178,8 @@ species:
       -2.27338765e-12, 1.196838345e-17, 1.866686325e+06, -375.23374]
     note: Hf:Cox,1989. Kramida,1997. Gordon,1999. [g11/97]
 - name: Be+
-<<<<<<< HEAD
   composition: {Be: 1}
   charge: 1
-=======
-  composition: {Be: 1, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -2402,12 +2278,8 @@ species:
       1.297785691e-10, -5.29188581e-15, -2489.846221, 52.1601869]
     note: Gurvich,1996a pt1 p356, pt2 p286. [tpis96]
 - name: BeH+
-<<<<<<< HEAD
   composition: {Be: 1, H: 1}
   charge: 1
-=======
-  composition: {Be: 1, H: 1, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -2489,12 +2361,8 @@ species:
       7.92651192e-12, -4.64541952e-16, 3121.216271, -25.71641308]
     note: Gurvich,1996a pt1 p358 pt2 p288. [tpis96]
 - name: BeOH+
-<<<<<<< HEAD
   composition: {Be: 1, O: 1, H: 1}
   charge: 1
-=======
-  composition: {Be: 1, O: 1, H: 1, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -2631,12 +2499,8 @@ species:
       122.6657143]
     note: Hf:Cox,1989. Moore,1971. Moore,1970a. Gordon,1999. [g 3/97]
 - name: Br+
-<<<<<<< HEAD
   composition: {Br: 1}
   charge: 1
-=======
-  composition: {Br: 1, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -2649,12 +2513,8 @@ species:
       2.15561882e-12, -1.769476126e-17, -1.399767498e+05, 79.315777]
     note: Moore,1971. Moore,1970a. Gordon,1999. [g10/97]
 - name: Br-
-<<<<<<< HEAD
   composition: {Br: 1}
   charge: -1
-=======
-  composition: {Br: 1, E: 1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -2798,12 +2658,8 @@ species:
       -2.230078776e-11, 2.899388702e-16, 2.355273444e+06, -640.512316]
     note: Hf:Douglas,1955. Moore,1970b. Gordon,1999. [g 7/97]
 - name: C+
-<<<<<<< HEAD
   composition: {C: 1}
   charge: 1
-=======
-  composition: {C: 1, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -2816,12 +2672,8 @@ species:
       -2.59987859e-12, 3.633868358e-17, 2.581370458e+05, -22.80019759]
     note: Moore,1970b. Gordon,1999. [g 6/98]
 - name: C-
-<<<<<<< HEAD
   composition: {C: 1}
   charge: -1
-=======
-  composition: {C: 1, E: 1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -2975,12 +2827,8 @@ species:
     rotational-relaxation: 1.0
     note: Kee et al.
 - name: CF+
-<<<<<<< HEAD
   composition: {C: 1, F: 1}
   charge: 1
-=======
-  composition: {C: 1, F: 1, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0]
@@ -3077,12 +2925,8 @@ species:
     rotational-relaxation: 1.0
     note: Kee et al.
 - name: CF2+
-<<<<<<< HEAD
   composition: {C: 1, F: 2}
   charge: 1
-=======
-  composition: {C: 1, F: 2, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0]
@@ -3157,12 +3001,8 @@ species:
     rotational-relaxation: 1.0
     note: Kee et al.
 - name: CF3+
-<<<<<<< HEAD
   composition: {C: 1, F: 3}
   charge: 1
-=======
-  composition: {C: 1, F: 3, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0]
@@ -3237,12 +3077,8 @@ species:
     rotational-relaxation: 0.0
     note: Kee et al.
 - name: CH+
-<<<<<<< HEAD
   composition: {C: 1, H: 1}
   charge: 1
-=======
-  composition: {C: 1, H: 1, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -3656,12 +3492,8 @@ species:
     rotational-relaxation: 2.0
     note: Kee et al.
 - name: CH2OH+
-<<<<<<< HEAD
   composition: {C: 1, H: 3, O: 1}
   charge: 1
-=======
-  composition: {C: 1, H: 3, O: 1, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0]
@@ -3811,12 +3643,8 @@ species:
     rotational-relaxation: 1.0
     note: Kee et al.
 - name: CN+
-<<<<<<< HEAD
   composition: {C: 1, N: 1}
   charge: 1
-=======
-  composition: {C: 1, N: 1, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -3829,12 +3657,8 @@ species:
       8.17834066e-12, -9.6295062e-17, -9.22904714e+05, 296.4624987]
     note: Gurvich,1991 pt1 p215 pt2 p203. [tpis91]
 - name: CN-
-<<<<<<< HEAD
   composition: {C: 1, N: 1}
   charge: -1
-=======
-  composition: {C: 1, N: 1, E: 1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0]
@@ -3887,12 +3711,8 @@ species:
     rotational-relaxation: 1.8
     note: Kee et al.
 - name: CO+
-<<<<<<< HEAD
   composition: {C: 1, O: 1}
   charge: 1
-=======
-  composition: {C: 1, O: 1, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -4004,12 +3824,8 @@ species:
     rotational-relaxation: 2.1
     note: Kee et al.
 - name: CO2+
-<<<<<<< HEAD
   composition: {C: 1, O: 2}
   charge: 1
-=======
-  composition: {C: 1, O: 2, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -4088,12 +3904,8 @@ species:
     rotational-relaxation: 4.0
     note: Kee et al.
 - name: C2+
-<<<<<<< HEAD
   composition: {C: 2}
   charge: 1
-=======
-  composition: {C: 2, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -4106,12 +3918,8 @@ species:
       4.94327292e-12, -7.98880426e-17, 4.12085761e+05, -21.12967169]
     note: Gurvich,1991 pt1 p14 pt2 p10. [tpis91]
 - name: C2-
-<<<<<<< HEAD
   composition: {C: 2}
   charge: -1
-=======
-  composition: {C: 2, E: 1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0]
@@ -6005,12 +5813,8 @@ species:
       -1.16440385e-10, 1.527134223e-15, 1.258651434e+07, -3692.10161]
     note: Hf:Cox,1989. Sugar,1985. Gordon,1999. [g 8/97]
 - name: Ca+
-<<<<<<< HEAD
   composition: {Ca: 1}
   charge: 1
-=======
-  composition: {Ca: 1, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -6055,12 +5859,8 @@ species:
       -4.10172699e-11, 8.81317764e-17, 1.662599241e+04, -33.98731174]
     note: Gurvich,1996a pt1 p464 pt2 p363. [tpis96]
 - name: CaCl+
-<<<<<<< HEAD
   composition: {Ca: 1, Cl: 1}
   charge: 1
-=======
-  composition: {Ca: 1, Cl: 1, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0]
@@ -6093,12 +5893,8 @@ species:
       3.74991596e-11, -3.47097645e-15, -2.488814584e+04, -8.6146637]
     note: Gurvich,1996a pt1 p456 pt2 p359. [tpis96]
 - name: CaF+
-<<<<<<< HEAD
   composition: {Ca: 1, F: 1}
   charge: 1
-=======
-  composition: {Ca: 1, F: 1, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0]
@@ -6166,12 +5962,8 @@ species:
       1.057379426e-11, -1.396044154e-16, -1.662378721e+06, 393.449193]
     note: Gurvich,1996a pt1 p443 pt2 p349. [tpis96]
 - name: CaO+
-<<<<<<< HEAD
   composition: {Ca: 1, O: 1}
   charge: 1
-=======
-  composition: {Ca: 1, O: 1, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -6195,12 +5987,8 @@ species:
       -1.789056647e-11, -3.58071641e-16, 1.340196822e+04, -46.4608426]
     note: Gurvich,1996a pt1 p451 pt2 p355. [tpis96]
 - name: CaOH+
-<<<<<<< HEAD
   composition: {Ca: 1, O: 1, H: 1}
   charge: 1
-=======
-  composition: {Ca: 1, O: 1, H: 1, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0]
@@ -6258,12 +6046,8 @@ species:
       7.42571255e-11, -1.026730246e-15, -7.26752899e+06, 2167.946107]
     note: Hf:Cox,1989. Moore,1971. Gordon,1999. [g 7/97]
 - name: Cd+
-<<<<<<< HEAD
   composition: {Cd: 1}
   charge: 1
-=======
-  composition: {Cd: 1, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -6298,12 +6082,8 @@ species:
     rotational-relaxation: 1.0
     note: Kee et al.
 - name: Cl+
-<<<<<<< HEAD
   composition: {Cl: 1}
   charge: 1
-=======
-  composition: {Cl: 1, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -6316,12 +6096,8 @@ species:
       -1.571848967e-13, 8.44251388e-18, 1.683434405e+05, 1.334407234]
     note: Moore,1971. Moore,1970a. Gordon,1999. [g 1/98]
 - name: Cl-
-<<<<<<< HEAD
   composition: {Cl: 1}
   charge: -1
-=======
-  composition: {Cl: 1, E: 1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -6441,12 +6217,8 @@ species:
       3.86251515e-11, -5.002032746e-16, -3.076031798e+06, 1003.028648]
     note: Hf:Hultgren,1973. Sugar,1985. Gordon,1999. [g 7/97]
 - name: Co+
-<<<<<<< HEAD
   composition: {Co: 1}
   charge: 1
-=======
-  composition: {Co: 1, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -6459,12 +6231,8 @@ species:
       -7.11995216e-11, 8.635423717e-16, 1.29363139e+07, -3201.66247]
     note: Sugar,1985. Gordon,1999. [g 7/97]
 - name: Co-
-<<<<<<< HEAD
   composition: {Co: 1}
   charge: -1
-=======
-  composition: {Co: 1, E: 1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -6490,12 +6258,8 @@ species:
       -1.166504597e-10, 1.367279456e-15, 1.955381984e+07, -5133.51055]
     note: Hf:Chase,1998 p963 6/79. Sugar,1985. Gordon,1999. [g 7/97]
 - name: Cr+
-<<<<<<< HEAD
   composition: {Cr: 1}
   charge: 1
-=======
-  composition: {Cr: 1, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -6508,12 +6272,8 @@ species:
       -4.0996736e-11, 5.728606039e-16, 3.28164581e+06, -1034.723629]
     note: Sugar,1985. Gordon,1999. [g 7/97]
 - name: Cr-
-<<<<<<< HEAD
   composition: {Cr: 1}
   charge: -1
-=======
-  composition: {Cr: 1, E: 1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -6569,12 +6329,8 @@ species:
       3.36678579e-11, -1.614026492e-15, -4.7238802e+04, -19.45305345]
     note: Gurvich,1982 pt1 p17 pt2 p20. [tpis82]
 - name: CrO3-
-<<<<<<< HEAD
   composition: {Cr: 1, O: 3}
   charge: -1
-=======
-  composition: {Cr: 1, O: 3, E: 1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0]
@@ -6598,12 +6354,8 @@ species:
       5.84848848e-12, -6.169370441e-17, -3.58526884e+06, 615.6618174]
     note: Hf:Cox,1989. Moore,1971. Moore,1970a. Gordon,1999. [g 7/97]
 - name: Cs+
-<<<<<<< HEAD
   composition: {Cs: 1}
   charge: 1
-=======
-  composition: {Cs: 1, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -6614,12 +6366,8 @@ species:
       -3.74881838e-13, 1.214944533e-16, -1.072498017e+06, 275.6827325]
     note: Moore,1971. Gordon,1999. [g 1/98]
 - name: Cs-
-<<<<<<< HEAD
   composition: {Cs: 1}
   charge: -1
-=======
-  composition: {Cs: 1, E: 1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -6849,12 +6597,8 @@ species:
       -9.49941993e-14, 4.48912254e-18, -1.93437785e+04, -1.20397045]
     note: Gurvich,1982 pt1 p473 pt2 p496. [tpis82]
 - name: Cs2O+
-<<<<<<< HEAD
   composition: {Cs: 2, O: 1}
   charge: 1
-=======
-  composition: {Cs: 2, O: 1, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0]
@@ -6911,12 +6655,8 @@ species:
       2.220446727e-11, -2.441532031e-16, -3.30530458e+06, 919.862292]
     note: Hf:Cox,1989. Sugar,1990. Gordon,1999. [g12/97]
 - name: Cu+
-<<<<<<< HEAD
   composition: {Cu: 1}
   charge: 1
-=======
-  composition: {Cu: 1, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -6929,12 +6669,8 @@ species:
       -8.45218904e-11, 1.013018211e-15, 1.468809255e+07, -3729.91801]
     note: Sugar,1990. Gordon,1999. [g 3/98]
 - name: Cu-
-<<<<<<< HEAD
   composition: {Cu: 1}
   charge: -1
-=======
-  composition: {Cu: 1, E: 1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -7033,12 +6769,8 @@ species:
       -7.6779678e-12, 9.624191177e-17, 1.06592204e+06, -272.6201602]
     note: 'D0(D2): Herzberg,1970. Moore,1972. Gordon,1999. [g 6/97]'
 - name: D+
-<<<<<<< HEAD
   composition: {D: 1}
   charge: 1
-=======
-  composition: {D: 1, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -7048,12 +6780,8 @@ species:
     - [0.0, 0.0, 2.5, 0.0, 0.0, 0.0, 0.0, 1.845120037e+05, -0.1018414521]
     note: Moore,1972. Gordon,1999. [g 9/96]
 - name: D-
-<<<<<<< HEAD
   composition: {D: 1}
   charge: -1
-=======
-  composition: {D: 1, E: 1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -7120,12 +6848,8 @@ species:
       6.7292892e-11, -2.765192818e-15, -1.959411733e+04, 17.89922833]
     note: Gurvich,1989 pt1 p138 pt2 p49. [tpis89]
 - name: DO2-
-<<<<<<< HEAD
   composition: {D: 1, O: 2}
   charge: -1
-=======
-  composition: {D: 1, O: 2, E: 1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0]
@@ -7149,12 +6873,8 @@ species:
       -1.390917969e-11, 1.637606941e-16, 2.460108052e+06, -663.700952]
     note: Ref-Species. Gurvich,1989 pt1 p134 pt2 p45. [tpis89]
 - name: D2+
-<<<<<<< HEAD
   composition: {D: 2}
   charge: 1
-=======
-  composition: {D: 2, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0]
@@ -7165,12 +6885,8 @@ species:
       -3.135924623e-10, 1.857684975e-14, 2.05829889e+05, -52.8391224]
     note: Chase,1998 p1041. [j 9/77]
 - name: D2-
-<<<<<<< HEAD
   composition: {D: 2}
   charge: -1
-=======
-  composition: {D: 2, E: 1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0]
@@ -7237,12 +6953,8 @@ species:
     rotational-relaxation: 0.0
     note: Kee et al.
 - name: F+
-<<<<<<< HEAD
   composition: {F: 1}
   charge: 1
-=======
-  composition: {F: 1, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -7255,12 +6967,8 @@ species:
       6.42082807e-13, -8.25797973e-18, 2.269126001e+05, 11.02848944]
     note: Moore,1971. Moore,1970a. Gordon,1999. [g 3/97]
 - name: F-
-<<<<<<< HEAD
   composition: {F: 1}
   charge: -1
-=======
-  composition: {F: 1, E: 1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -7391,12 +7099,8 @@ species:
       6.26767143e-12, -1.480574914e-16, 4.84764829e+06, -869.728977]
     note: Hf:Hultgren,1973. Sugar,1985. Gordon,1999. [g 5/97]
 - name: Fe+
-<<<<<<< HEAD
   composition: {Fe: 1}
   charge: 1
-=======
-  composition: {Fe: 1, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -7410,12 +7114,8 @@ species:
       40.5349733]
     note: Sugar,1985. Gordon,1999. [g 3/98]
 - name: Fe-
-<<<<<<< HEAD
   composition: {Fe: 1}
   charge: -1
-=======
-  composition: {Fe: 1, E: 1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -7538,12 +7238,8 @@ species:
     rotational-relaxation: 0.0
     note: Kee et al.
 - name: Ga+
-<<<<<<< HEAD
   composition: {Ga: 1}
   charge: 1
-=======
-  composition: {Ga: 1, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -7888,12 +7584,8 @@ species:
       -89.53523898]
     note: Hf:Gurvich,1991 pt1 p311. Sugar,1993. Gordon,1999. [g 3/99]
 - name: Ge+
-<<<<<<< HEAD
   composition: {Ge: 1}
   charge: 1
-=======
-  composition: {Ge: 1, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -7906,12 +7598,8 @@ species:
       1.853441677e-12, -5.082067525e-17, 3.85778542e+05, -48.42537137]
     note: Sugar,1993. Gordon,1999. [g 3/99]
 - name: Ge-
-<<<<<<< HEAD
   composition: {Ge: 1}
   charge: -1
-=======
-  composition: {Ge: 1, E: 1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -8154,12 +7842,8 @@ species:
     rotational-relaxation: 0.0
     note: Kee et al.
 - name: H+
-<<<<<<< HEAD
   composition: {H: 1}
   charge: 1
-=======
-  composition: {H: 1, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -8169,12 +7853,8 @@ species:
     - [0.0, 0.0, 2.5, 0.0, 0.0, 0.0, 0.0, 1.840214877e+05, -1.140646644]
     note: 'IP(H): Moore,1972. Gordon,1999. [g10/00]'
 - name: H-
-<<<<<<< HEAD
   composition: {H: 1}
   charge: -1
-=======
-  composition: {H: 1, E: 1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -8217,12 +7897,8 @@ species:
       -1.703550237e-11, 7.37274002e-16, -3161.852029, -40.3681272]
     note: Boron oxide-hydride Gurvich,1996a pt1 p39,pt2 p23. [tpis96]
 - name: HBO+
-<<<<<<< HEAD
   composition: {H: 1, B: 1, O: 1}
   charge: 1
-=======
-  composition: {H: 1, B: 1, O: 1, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -8257,12 +7933,8 @@ species:
       5.34296831e-11, -2.154140451e-15, 6485.47562, -13.31379864]
     note: Chase,1998 p227 12/75. Jacox,1994. [g 2/01]
 - name: HBS+
-<<<<<<< HEAD
   composition: {H: 1, B: 1, S: 1}
   charge: 1
-=======
-  composition: {H: 1, B: 1, S: 1, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -8326,12 +7998,8 @@ species:
     rotational-relaxation: 0.0
     note: Kee et al.
 - name: HCO+
-<<<<<<< HEAD
   composition: {H: 1, C: 1, O: 1}
   charge: 1
-=======
-  composition: {H: 1, C: 1, O: 1, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -8417,12 +8085,8 @@ species:
       -1.372721571e-11, 1.614120677e-16, 2.431070386e+06, -656.943706]
     note: Gurvich,1989 pt1 p144 pt2 p53. [tpis89]
 - name: HD+
-<<<<<<< HEAD
   composition: {H: 1, D: 1}
   charge: 1
-=======
-  composition: {H: 1, D: 1, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -8606,12 +8270,8 @@ species:
     rotational-relaxation: 1.0
     note: Kee et al.
 - name: HO2-
-<<<<<<< HEAD
   composition: {H: 1, O: 2}
   charge: -1
-=======
-  composition: {H: 1, O: 2, E: 1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0]
@@ -8666,12 +8326,8 @@ species:
     rotational-relaxation: 280.0
     note: Kee et al.
 - name: H2+
-<<<<<<< HEAD
   composition: {H: 2}
   charge: 1
-=======
-  composition: {H: 2, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -8685,12 +8341,8 @@ species:
       147.141537]
     note: Gurvich,1978 pt1 p107 pt2 p33. [tpis78]
 - name: H2-
-<<<<<<< HEAD
   composition: {H: 2}
   charge: -1
-=======
-  composition: {H: 2, E: 1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0]
@@ -8765,12 +8417,8 @@ species:
     rotational-relaxation: 4.0
     note: Kee et al.
 - name: H2O+
-<<<<<<< HEAD
   composition: {H: 2, O: 1}
   charge: 1
-=======
-  composition: {H: 2, O: 1, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -8901,12 +8549,8 @@ species:
       -1.308662105e-11, 3.978322e-16, -5.47171365e+04, -99.0778764]
     note: Gurvich,1989 pt1 p166 pt2 p309. [tpis89]
 - name: H3O+
-<<<<<<< HEAD
   composition: {H: 3, O: 1}
   charge: 1
-=======
-  composition: {H: 3, O: 1, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -8994,12 +8638,8 @@ species:
     rotational-relaxation: 0.0
     note: Kee et al.
 - name: He+
-<<<<<<< HEAD
   composition: {He: 1}
   charge: 1
-=======
-  composition: {He: 1, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -9021,12 +8661,8 @@ species:
       -7.419662e-11, 1.067224054e-15, 3.39199992e+06, -1201.22599]
     note: Hf:Cox,1989. Moore,1971. Gordon,1999. [g 1/98]
 - name: Hg+
-<<<<<<< HEAD
   composition: {Hg: 1}
   charge: 1
-=======
-  composition: {Hg: 1, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -9063,12 +8699,8 @@ species:
       -1.969145066e-11, 2.643177163e-16, 6.38484303e+05, -297.2997119]
     note: Hf:Cox,1989. Moore,1971. Moore,1970a. Gordon,1999. [g 3/97]
 - name: I+
-<<<<<<< HEAD
   composition: {I: 1}
   charge: 1
-=======
-  composition: {I: 1, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -9081,12 +8713,8 @@ species:
       3.6849277e-11, -5.301687095e-16, -3.001474591e+06, 879.046874]
     note: Moore,1971. Moore,1970a. Gordon,1999. [g10/97]
 - name: I-
-<<<<<<< HEAD
   composition: {I: 1}
   charge: -1
-=======
-  composition: {I: 1, E: 1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -9143,12 +8771,8 @@ species:
     note: Hf:Gurvich,1996a. Johansson,1967. Moore,1971. Gordon,1999. [g
       1/99]
 - name: In+
-<<<<<<< HEAD
   composition: {In: 1}
   charge: 1
-=======
-  composition: {In: 1, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -9491,12 +9115,8 @@ species:
     rotational-relaxation: 1.0
     note: Kee et al.
 - name: K+
-<<<<<<< HEAD
   composition: {K: 1}
   charge: 1
-=======
-  composition: {K: 1, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -9516,12 +9136,8 @@ species:
     rotational-relaxation: 1.0
     note: Kee et al.
 - name: K-
-<<<<<<< HEAD
   composition: {K: 1}
   charge: -1
-=======
-  composition: {K: 1, E: 1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -9732,12 +9348,8 @@ species:
       -1.064158914e-09, 8.33493693e-14, -4.22624383e+05, 386.714251]
     note: Gurvich,1982 pt1 p370 pt2 p402. [tpis82]
 - name: K2+
-<<<<<<< HEAD
   composition: {K: 2}
   charge: 1
-=======
-  composition: {K: 2, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 3000.0]
@@ -9825,12 +9437,8 @@ species:
       -1.135283694e-13, 5.3258606e-18, -1.107222244e+04, -5.76871872]
     note: Gurvich,1982 pt1 p377 pt2 p407. [tpis82]
 - name: K2O+
-<<<<<<< HEAD
   composition: {K: 2, O: 1}
   charge: 1
-=======
-  composition: {K: 2, O: 1, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0]
@@ -9886,12 +9494,8 @@ species:
       9.96978779e-11, -1.521249677e-15, -7.11166737e+06, 2086.866326]
     note: Ref-Elm. Sugar,1991. [g 8/97]
 - name: Kr+
-<<<<<<< HEAD
   composition: {Kr: 1}
   charge: 1
-=======
-  composition: {Kr: 1, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -9916,12 +9520,8 @@ species:
       -6.6915708e-11, 8.088023606e-16, 1.217791847e+07, -3006.680193]
     note: Hf:Cox,1989. Moore,1971. Gordon,1999. [g 7/97]
 - name: Li+
-<<<<<<< HEAD
   composition: {Li: 1}
   charge: 1
-=======
-  composition: {Li: 1, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -9931,12 +9531,8 @@ species:
     - [0.0, 0.0, 2.5, 0.0, 0.0, 0.0, 0.0, 8.17272455e+04, 1.754357228]
     note: Moore,1971. Gordon,1999. [g 3/97]
 - name: Li-
-<<<<<<< HEAD
   composition: {Li: 1}
   charge: -1
-=======
-  composition: {Li: 1, E: 1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -10111,12 +9707,8 @@ species:
       -3.27582024e-09, 1.652000081e-13, 7.72307201e+05, -1021.697298]
     note: Chase,1998 p1505. [j12/83]
 - name: Li2+
-<<<<<<< HEAD
   composition: {Li: 2}
   charge: 1
-=======
-  composition: {Li: 2, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0]
@@ -10182,12 +9774,8 @@ species:
       -1.370211764e-09, 8.11172719e-14, 2.990726399e+04, -156.4517822]
     note: Gurvich,1982 pt1 p259 pt2 p296. [tpis82]
 - name: Li2O+
-<<<<<<< HEAD
   composition: {Li: 2, O: 1}
   charge: 1
-=======
-  composition: {Li: 2, O: 1, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0]
@@ -10231,12 +9819,8 @@ species:
       -8.11443907e-12, 3.76683021e-16, -1.268908595e+05, -80.14316674]
     note: Chase,1998 p1522. [j12/78]
 - name: Li3+
-<<<<<<< HEAD
   composition: {Li: 3}
   charge: 1
-=======
-  composition: {Li: 3, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0]
@@ -10304,12 +9888,8 @@ species:
       -1469.355261]
     note: Hf:Cox,1989. Kaufman,1991a. Gordon,1999. [g 6/97]
 - name: Mg+
-<<<<<<< HEAD
   composition: {Mg: 1}
   charge: 1
-=======
-  composition: {Mg: 1, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -10354,12 +9934,8 @@ species:
       -1.12640938e-10, 5.81062073e-15, 1.327188977e+04, -27.03802395]
     note: Gurvich,1996a pt1 p412 pt2 p328. [tpis96]
 - name: MgCl+
-<<<<<<< HEAD
   composition: {Mg: 1, Cl: 1}
   charge: 1
-=======
-  composition: {Mg: 1, Cl: 1, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -10394,12 +9970,8 @@ species:
       3.33605229e-11, -2.270104205e-15, -3.16932399e+04, 4.4105659]
     note: Gurvich,1996a pt1 p408 pt2 p325. [tpis96]
 - name: MgF+
-<<<<<<< HEAD
   composition: {Mg: 1, F: 1}
   charge: 1
-=======
-  composition: {Mg: 1, F: 1, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -10424,12 +9996,8 @@ species:
       -6.15824576e-13, 2.822792666e-17, -9.06001944e+04, -14.2079699]
     note: Gurvich,1996a pt1 p411 pt2 p327. [tpis96]
 - name: MgF2+
-<<<<<<< HEAD
   composition: {Mg: 1, F: 2}
   charge: 1
-=======
-  composition: {Mg: 1, F: 2, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -10510,12 +10078,8 @@ species:
       3.025677088e-11, -1.554849476e-15, -6149.11456, -16.71027009]
     note: Gurvich,1996a pt1 p404 pt2 p322. [tpis96]
 - name: MgOH+
-<<<<<<< HEAD
   composition: {Mg: 1, O: 1, H: 1}
   charge: 1
-=======
-  composition: {Mg: 1, O: 1, H: 1, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -10585,12 +10149,8 @@ species:
       -9.68963105e-11, 1.133286034e-15, 1.879530161e+07, -4690.09789]
     note: Hf:Desai,1987. Sugar,1985. Gordon,1999. [g 7/97]
 - name: Mn+
-<<<<<<< HEAD
   composition: {Mn: 1}
   charge: 1
-=======
-  composition: {Mn: 1, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -10616,12 +10176,8 @@ species:
       -2.199865715e-10, 2.798315513e-15, 3.062163602e+07, -8122.81134]
     note: Hf:Desai,1987. Sugar,1988. Gordon,1999. [g 7/97]
 - name: Mo+
-<<<<<<< HEAD
   composition: {Mo: 1}
   charge: 1
-=======
-  composition: {Mo: 1, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -10634,12 +10190,8 @@ species:
       2.593422324e-11, -2.913787941e-16, -6.98909813e+06, 1517.10178]
     note: Sugar,1988. Gordon,1999. [g 7/97]
 - name: Mo-
-<<<<<<< HEAD
   composition: {Mo: 1}
   charge: -1
-=======
-  composition: {Mo: 1, E: 1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -10684,12 +10236,8 @@ species:
       5.69263726e-11, -3.48965731e-15, -4.92373872e+04, -21.14864892]
     note: Gurvich,1982 pt1 p31 pt2 p35. [tpis82]
 - name: MoO3-
-<<<<<<< HEAD
   composition: {Mo: 1, O: 3}
   charge: -1
-=======
-  composition: {Mo: 1, O: 3, E: 1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0]
@@ -10765,12 +10313,8 @@ species:
     rotational-relaxation: 0.0
     note: Kee et al.
 - name: N+
-<<<<<<< HEAD
   composition: {N: 1}
   charge: 1
-=======
-  composition: {N: 1, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -10784,12 +10328,8 @@ species:
       -17.0664638]
     note: Moore,1975. Gordon,1999. [g 6/97]
 - name: N-
-<<<<<<< HEAD
   composition: {N: 1}
   charge: -1
-=======
-  composition: {N: 1, E: 1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -10910,12 +10450,8 @@ species:
     rotational-relaxation: 4.0
     note: Kee et al.
 - name: NH+
-<<<<<<< HEAD
   composition: {N: 1, H: 1}
   charge: 1
-=======
-  composition: {N: 1, H: 1, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -11000,7 +10536,6 @@ species:
     polarizability: 0.0
     rotational-relaxation: 10.0
     note: Kee et al.
-<<<<<<< HEAD
 # - name: UA
 #   composition: {Ua: 1}
 #   thermo:
@@ -11012,19 +10547,6 @@ species:
 #     - [2.452389535e+06, -8040.89424, 12.71346201, -3.98018658e-04, 3.55250275e-08,
 #       2.53092357e-12, -3.32270053e-16, 4.38619196e+04, -64.62330602]
 #     note: 'Gurvich & Haar: This is a dummy for un-dissociated NH3 [tpis89]'
-=======
-- name: UA
-  composition: {Ua: 1}
-  thermo:
-    model: NASA9
-    temperature-ranges: [200.0, 1000.0, 6000.0]
-    data:
-    - [-7.68122615e+04, 1270.951578, -3.89322913, 0.02145988418, -2.183766703e-05,
-      1.317385706e-08, -3.33232206e-12, -1.264886413e+04, 43.66014588]
-    - [2.452389535e+06, -8040.89424, 12.71346201, -3.98018658e-04, 3.55250275e-08,
-      2.53092357e-12, -3.32270053e-16, 4.38619196e+04, -64.62330602]
-    note: 'Gurvich & Haar: This is a dummy for un-dissociated NH3 [tpis89]'
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
 - name: NH2OH
   composition: {N: 1, H: 3, O: 1}
   thermo:
@@ -11037,12 +10559,8 @@ species:
       -1.881744532e-11, 1.918174365e-16, 8.92302071e+04, -126.9053624]
     note: Hydroxylamine. Gurvich,1989 pt1 p368 pt2 p232. [tpis89]
 - name: NH4+
-<<<<<<< HEAD
   composition: {N: 1, H: 4}
   charge: 1
-=======
-  composition: {N: 1, H: 4, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0]
@@ -11075,12 +10593,8 @@ species:
     rotational-relaxation: 4.0
     note: Kee et al.
 - name: NO+
-<<<<<<< HEAD
   composition: {N: 1, O: 1}
   charge: 1
-=======
-  composition: {N: 1, O: 1, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -11146,12 +10660,8 @@ species:
     rotational-relaxation: 1.0
     note: Kee et al.
 - name: NO2-
-<<<<<<< HEAD
   composition: {N: 1, O: 2}
   charge: -1
-=======
-  composition: {N: 1, O: 2, E: 1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0]
@@ -11195,12 +10705,8 @@ species:
       -6.19546675e-12, 2.870000149e-16, 8982.01173, -34.44666597]
     note: Chase,1998 p1607. [j12/64]
 - name: NO3-
-<<<<<<< HEAD
   composition: {N: 1, O: 3}
   charge: -1
-=======
-  composition: {N: 1, O: 3, E: 1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0]
@@ -11244,12 +10750,8 @@ species:
     rotational-relaxation: 4.0
     note: Kee et al.
 - name: N2+
-<<<<<<< HEAD
   composition: {N: 2}
   charge: 1
-=======
-  composition: {N: 2, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -11262,12 +10764,8 @@ species:
       4.14444123e-11, -5.62189309e-16, -2.217361867e+06, 843.6270947]
     note: Gurvich,1989 pt1 p323 pt2 p200. [tpis89]
 - name: N2-
-<<<<<<< HEAD
   composition: {N: 2}
   charge: -1
-=======
-  composition: {N: 2, E: 1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -11404,12 +10902,8 @@ species:
     rotational-relaxation: 1.0
     note: Kee et al.
 - name: N2O+
-<<<<<<< HEAD
   composition: {N: 2, O: 1}
   charge: 1
-=======
-  composition: {N: 2, O: 1, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0]
@@ -11487,12 +10981,8 @@ species:
       -3.93697111e-11, 4.630689121e-16, 7.74867726e+06, -1939.615505]
     note: Hf:Cox,1989. Martin,W.C.,1981. Gordon,1999. [g 8/97]
 - name: Na+
-<<<<<<< HEAD
   composition: {Na: 1}
   charge: 1
-=======
-  composition: {Na: 1, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -11503,12 +10993,8 @@ species:
       -1.944511626e-15, 2.959355125e-20, 7.27341362e+04, 3.50390406]
     note: Martin,W.C.,1981. Gordon,1999. [g 1/98]
 - name: Na-
-<<<<<<< HEAD
   composition: {Na: 1}
   charge: -1
-=======
-  composition: {Na: 1, E: 1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -11661,12 +11147,8 @@ species:
       1.022715136e-11, -5.71328641e-16, -9509.90171, -22.02310401]
     note: Gurvich,1996b. [g12/96]
 - name: NaOH+
-<<<<<<< HEAD
   composition: {Na: 1, O: 1, H: 1}
   charge: 1
-=======
-  composition: {Na: 1, O: 1, H: 1, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -11745,12 +11227,8 @@ species:
       -1.996634558e-13, 9.27643355e-18, -4297.33965, -10.63530214]
     note: Gurvich,1982 pt1 p321 pt2 p361. [tpis82]
 - name: Na2O+
-<<<<<<< HEAD
   composition: {Na: 2, O: 1}
   charge: 1
-=======
-  composition: {Na: 2, O: 1, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0]
@@ -11829,12 +11307,8 @@ species:
       -4.08723301e-11, 4.826490497e-16, 8.35962256e+06, -1997.79729]
     note: Hf:Gurvich,1982. Moore,1971. Moore,1970a. Gordon,1999. [g 3/98]
 - name: Nb+
-<<<<<<< HEAD
   composition: {Nb: 1}
   charge: 1
-=======
-  composition: {Nb: 1, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -11848,12 +11322,8 @@ species:
       -84.9455571]
     note: Moore,1971. Moore,1970a. Gordon,1999. [g 7/97]
 - name: Nb-
-<<<<<<< HEAD
   composition: {Nb: 1}
   charge: -1
-=======
-  composition: {Nb: 1, E: 1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -11923,12 +11393,8 @@ species:
       -1.170213183e-13, 8.415153652e-18, -5.66393363e+04, 16.48438697]
     note: Ref-Elm. Moore,1971. Moore,1970a. Gordon,1999. [g 5/97]
 - name: Ne+
-<<<<<<< HEAD
   composition: {Ne: 1}
   charge: 1
-=======
-  composition: {Ne: 1, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -11954,12 +11420,8 @@ species:
       -1.604177606e-11, 2.935430214e-16, 1.409017848e+06, -267.2455567]
     note: Hf:Hultgren,1973. Litzen,1993. Gordon,1999. [g 8/97]
 - name: Ni+
-<<<<<<< HEAD
   composition: {Ni: 1}
   charge: 1
-=======
-  composition: {Ni: 1, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -11972,12 +11434,8 @@ species:
       -1.70544355e-12, 5.049635419e-18, 4.25320409e+05, -95.9050216]
     note: Sugar,1985. Gordon,1999. [g 8/97]
 - name: Ni-
-<<<<<<< HEAD
   composition: {Ni: 1}
   charge: -1
-=======
-  composition: {Ni: 1, E: 1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -12057,12 +11515,8 @@ species:
     rotational-relaxation: 0.0
     note: Kee et al.
 - name: O+
-<<<<<<< HEAD
   composition: {O: 1}
   charge: 1
-=======
-  composition: {O: 1, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -12074,12 +11528,8 @@ species:
       9.18683487e-12, -1.074163268e-16, -9.61420896e+05, 342.619308]
     note: Martin,W.C.,1993. Gordon,1999. [g 8/97]
 - name: O-
-<<<<<<< HEAD
   composition: {O: 1}
   charge: -1
-=======
-  composition: {O: 1, E: 1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -12103,12 +11553,8 @@ species:
       3.45445473e-12, -7.3806268e-16, 1.930492973e+04, -15.68898441]
     note: D0(OH)with ZPEadj. Gurvich,1989 pt1 p135 pt2 p47. [g 4/02]
 - name: OD-
-<<<<<<< HEAD
   composition: {O: 1, D: 1}
   charge: -1
-=======
-  composition: {O: 1, D: 1, E: 1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0]
@@ -12141,12 +11587,8 @@ species:
     rotational-relaxation: 0.0
     note: Kee et al.
 - name: OH+
-<<<<<<< HEAD
   composition: {O: 1, H: 1}
   charge: 1
-=======
-  composition: {O: 1, H: 1, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -12159,12 +11601,8 @@ species:
       -2.475038507e-11, 2.807730875e-16, 5.61659718e+06, -1351.879042]
     note: 'IP: Wiedmann,1992. Gurvich,1978 v1 pt2 p39. [g 4/02]'
 - name: OH-
-<<<<<<< HEAD
   composition: {O: 1, H: 1}
   charge: -1
-=======
-  composition: {O: 1, H: 1, E: 1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0]
@@ -12197,12 +11635,8 @@ species:
     rotational-relaxation: 3.8
     note: Kee et al.
 - name: O2+
-<<<<<<< HEAD
   composition: {O: 2}
   charge: 1
-=======
-  composition: {O: 2, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -12215,12 +11649,8 @@ species:
       1.167968599e-10, -1.589754791e-15, -8.85786627e+06, 2852.035602]
     note: Gurvich,1989 pt1 p98 pt2 p11. [tpis89]
 - name: O2-
-<<<<<<< HEAD
   composition: {O: 2}
   charge: -1
-=======
-  composition: {O: 2, E: 1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0]
@@ -12265,12 +11695,8 @@ species:
       -205.6960928]
     note: Hf:Cox,1989. Martin,W.C.,1985. Gordon,1999. [g 5/97]
 - name: P+
-<<<<<<< HEAD
   composition: {P: 1}
   charge: 1
-=======
-  composition: {P: 1, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -12283,12 +11709,8 @@ species:
       4.84561302e-13, -7.44840297e-18, 2.284649718e+05, -13.46454894]
     note: Martin,W.C.,1985. Gordon,1999. [g 4/97]
 - name: P-
-<<<<<<< HEAD
   composition: {P: 1}
   charge: -1
-=======
-  composition: {P: 1, E: 1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -12323,12 +11745,8 @@ species:
       -2.21487992e-13, 1.04165355e-17, -8742.99368, -6.23402319]
     note: Gurvich,1989 pt1 p432 pt2 p283. [tpis89]
 - name: PCl2-
-<<<<<<< HEAD
   composition: {P: 1, Cl: 2}
   charge: -1
-=======
-  composition: {P: 1, Cl: 2, E: 1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0]
@@ -12372,12 +11790,8 @@ species:
       5.24364857e-11, -2.618755712e-15, -2.766773009e+04, 27.59312302]
     note: Gurvich,1989 pt1 p425 pt2 p276. [tpis89]
 - name: PF+
-<<<<<<< HEAD
   composition: {P: 1, F: 1}
   charge: 1
-=======
-  composition: {P: 1, F: 1, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -12390,12 +11804,8 @@ species:
       -9.29330722e-13, 1.456723674e-17, -264.0503508, 19.21588661]
     note: Chase,1998 p1086. [j 6/77]
 - name: PF-
-<<<<<<< HEAD
   composition: {P: 1, F: 1}
   charge: -1
-=======
-  composition: {P: 1, F: 1, E: 1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -12420,12 +11830,8 @@ species:
       -7.33899377e-13, 3.39672317e-17, -3.60064926e+04, -7.626493035]
     note: Gurvich,1989 pt1 p437 pt2 p288. [tpis89]
 - name: PFCl-
-<<<<<<< HEAD
   composition: {P: 1, F: 1, Cl: 1}
   charge: -1
-=======
-  composition: {P: 1, F: 1, Cl: 1, E: 1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0]
@@ -12469,12 +11875,8 @@ species:
       -1.25287026e-12, 5.78479114e-17, -6.33829584e+04, -10.41715673]
     note: Gurvich,1989 pt1 p426 pt2 p277. [tpis89]
 - name: PF2-
-<<<<<<< HEAD
   composition: {P: 1, F: 2}
   charge: -1
-=======
-  composition: {P: 1, F: 2, E: 1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0]
@@ -12573,12 +11975,8 @@ species:
       -1.624213739e-11, 3.76622524e-16, 4.18307463e+04, -42.3162325]
     note: Gurvich,1989 pt1 p422 pt2 p273. [tpis89]
 - name: PH2-
-<<<<<<< HEAD
   composition: {P: 1, H: 2}
   charge: -1
-=======
-  composition: {P: 1, H: 2, E: 1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0]
@@ -12631,12 +12029,8 @@ species:
       3.18441323e-11, -1.573691908e-15, -8939.79039, 6.954859188]
     note: Gurvich,1989 pt1 p404 pt2 p258. [tpis89]
 - name: PO-
-<<<<<<< HEAD
   composition: {P: 1, O: 1}
   charge: -1
-=======
-  composition: {P: 1, O: 1, E: 1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0]
@@ -12702,12 +12096,8 @@ species:
       -1.789964539e-11, 1.800381054e-16, -2.028884763e+04, -29.69743125]
     note: Gurvich,1989 pt1 p408 pt2 p260. [tpis89]
 - name: PO2-
-<<<<<<< HEAD
   composition: {P: 1, O: 2}
   charge: -1
-=======
-  composition: {P: 1, O: 2, E: 1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0]
@@ -12874,12 +12264,8 @@ species:
       -1.519361678e-11, 2.043475665e-16, 2.243651683e+06, -522.56499]
     note: Hf:Gurvich,1991. Moore,1971. Moore,1970a. Gordon,1999. [g 8/97]
 - name: Pb+
-<<<<<<< HEAD
   composition: {Pb: 1}
   charge: 1
-=======
-  composition: {Pb: 1, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -12892,12 +12278,8 @@ species:
       -8.11413377e-12, 5.90835263e-17, 2.122867468e+06, -516.355021]
     note: Moore1971. Moore,1970a. Gordon,1999. [g10/97]
 - name: Pb-
-<<<<<<< HEAD
   composition: {Pb: 1}
   charge: -1
-=======
-  composition: {Pb: 1, E: 1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -13140,12 +12522,8 @@ species:
       -2.996233671e-11, 3.657332046e-16, 2.636178014e+06, -958.651723]
     note: Hf:Cox,1989. Moore,1971. Moore,1970a. Gordon,1999. [g 1/98]
 - name: Rb+
-<<<<<<< HEAD
   composition: {Rb: 1}
   charge: 1
-=======
-  composition: {Rb: 1, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -13157,12 +12535,8 @@ species:
       -66.7220225]
     note: Moore,1971. IP:Moore,1970a. Gordon,1999. [g 1/98]
 - name: Rb-
-<<<<<<< HEAD
   composition: {Rb: 1}
   charge: -1
-=======
-  composition: {Rb: 1, E: 1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -13402,7 +12776,6 @@ species:
     - [-5.30289831e+05, -951.543545, 19.71013517, -2.842916301e-04, 6.28914294e-08,
       -7.2193243e-12, 3.34871819e-16, -1.338713151e+05, -70.56246882]
     note: Gurvich,1982 pt1 p452 pt2 p476. [g10/99]
-<<<<<<< HEAD
 # - name: Rn
 #   composition: {Rn: 1}
 #   thermo:
@@ -13430,34 +12803,6 @@ species:
 #     - [-2.408821471e+07, 1.571151698e+04, -1.411683762, 4.4952676e-04, -2.324033616e-08,
 #       5.83024335e-13, -5.82168281e-18, 918.74575, 42.3361328]
 #     note: Moore,1971. Gordon,1999. [g 1/97]
-=======
-- name: Rn
-  composition: {Rn: 1}
-  thermo:
-    model: NASA9
-    temperature-ranges: [200.0, 1000.0, 6000.0, 2.0e+04]
-    data:
-    - [3.38943209e-06, -1.311675533e-07, 2.500000001, -2.978593139e-12,
-      4.33705073e-15, -3.18204022e-18, 9.24778703e-22, -745.374999, 6.95244198]
-    - [2.730190029e+04, -82.8467262, 2.598178483, -5.81372985e-05, 1.819136527e-08,
-      -2.866656182e-12, 1.789322176e-16, -220.280934, 6.25500571]
-    - [9.18086668e+08, -6.2458546e+05, 172.4946531, -0.02325758595, 1.636222413e-06,
-      -5.36917315e-11, 6.507189926e-16, 4.8831059e+06, -1449.516146]
-    note: Ref-Elm. Moore,1971. Gordon,1999. [g 5/97]
-- name: Rn+
-  composition: {Rn: 1, E: -1}
-  thermo:
-    model: NASA9
-    temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
-    data:
-    - [-0.0969714897, 1.106742047e-03, 2.499994937, 1.189388239e-08, -1.515895754e-11,
-      9.95893481e-15, -2.640751817e-18, 1.24730476e+05, 8.3387617]
-    - [-1.998285319e+04, 59.3067566, 2.432476003, 3.71602592e-05, -1.012057848e-08,
-      1.192256661e-12, -3.18452198e-17, 1.243528478e+05, 8.82199779]
-    - [-2.408821471e+07, 1.571151698e+04, -1.411683762, 4.4952676e-04, -2.324033616e-08,
-      5.83024335e-13, -5.82168281e-18, 918.74575, 42.3361328]
-    note: Moore,1971. Gordon,1999. [g 1/97]
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
 - name: S
   composition: {S: 1}
   thermo:
@@ -13481,12 +12826,8 @@ species:
     rotational-relaxation: 0.0
     note: Kee et al.
 - name: S+
-<<<<<<< HEAD
   composition: {S: 1}
   charge: 1
-=======
-  composition: {S: 1, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -13499,12 +12840,8 @@ species:
       -201.7239957]
     note: Martin,W.C.,1990. Gordon,1999. [g 1/98]
 - name: S-
-<<<<<<< HEAD
   composition: {S: 1}
   charge: -1
-=======
-  composition: {S: 1, E: 1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -13539,12 +12876,8 @@ species:
       1.39331857e-11, -6.39479517e-16, -7210.4737, -2.774273151]
     note: Chase,1998 p856. [j 6/78]
 - name: SCl2+
-<<<<<<< HEAD
   composition: {S: 1, Cl: 2}
   charge: 1
-=======
-  composition: {S: 1, Cl: 2, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -13579,12 +12912,8 @@ species:
       -6.47800053e-11, 2.98029731e-15, 1.577461591e+04, -19.02584835]
     note: Gurvich,1989 pt1 p302 pt2 p183. [tpis89]
 - name: SF+
-<<<<<<< HEAD
   composition: {S: 1, F: 1}
   charge: 1
-=======
-  composition: {S: 1, F: 1, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -13597,12 +12926,8 @@ species:
       2.406680266e-12, -2.892795916e-17, -1.419262455e+05, 76.11520762]
     note: Chase,1998 p1091 6/76. [g 1/01]
 - name: SF-
-<<<<<<< HEAD
   composition: {S: 1, F: 1}
   charge: -1
-=======
-  composition: {S: 1, F: 1, E: 1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0]
@@ -13624,12 +12949,8 @@ species:
       -1.104468959e-12, 5.09530878e-17, -3.70428949e+04, -10.9525396]
     note: Gurvich,1989 pt1 p305 pt2 p185. [tpis89]
 - name: SF2+
-<<<<<<< HEAD
   composition: {S: 1, F: 2}
   charge: 1
-=======
-  composition: {S: 1, F: 2, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -13642,12 +12963,8 @@ species:
       9.54707717e-12, -1.181291324e-16, -8.50844907e+05, 284.390143]
     note: Chase,1998 p1144 12/76. [g 1/01]
 - name: SF2-
-<<<<<<< HEAD
   composition: {S: 1, F: 2}
   charge: -1
-=======
-  composition: {S: 1, F: 2, E: 1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -13671,12 +12988,8 @@ species:
       -1.068727665e-12, 4.9443426e-17, -6.35844586e+04, -24.89561796]
     note: Gurvich,1989 pt1 p306 pt2 p186. [tpis89]
 - name: SF3+
-<<<<<<< HEAD
   composition: {S: 1, F: 3}
   charge: 1
-=======
-  composition: {S: 1, F: 3, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -13689,12 +13002,8 @@ species:
       1.781530495e-12, -2.365386482e-17, 3.57548885e+04, -4.384285323]
     note: Chase,1998 p1170. [j12/76]
 - name: SF3-
-<<<<<<< HEAD
   composition: {S: 1, F: 3}
   charge: -1
-=======
-  composition: {S: 1, F: 3, E: 1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0]
@@ -13716,12 +13025,8 @@ species:
       -2.209423506e-12, 1.022335559e-16, -9.48317534e+04, -42.43061278]
     note: Gurvich,1989 pt1 p307 pt2 p188. [tpis89]
 - name: SF4+
-<<<<<<< HEAD
   composition: {S: 1, F: 4}
   charge: 1
-=======
-  composition: {S: 1, F: 4, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -13734,12 +13039,8 @@ species:
       2.214151827e-12, -2.649348632e-17, -1.772949712e+05, 33.97688982]
     note: Chase,1998 p1188. [j12/76]
 - name: SF4-
-<<<<<<< HEAD
   composition: {S: 1, F: 4}
   charge: -1
-=======
-  composition: {S: 1, F: 4, E: 1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -13763,12 +13064,8 @@ species:
       -1.417173409e-12, 6.5848894e-17, -1.135671054e+05, -55.77524201]
     note: Gurvich,1989 pt1 p308 pt2 p189. [tpis89]
 - name: SF5+
-<<<<<<< HEAD
   composition: {S: 1, F: 5}
   charge: 1
-=======
-  composition: {S: 1, F: 5, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -13781,12 +13078,8 @@ species:
       2.144486076e-13, -2.737984333e-18, 7.59751577e+04, -76.92263871]
     note: Chase,1998 p1200. [j12/77]
 - name: SF5-
-<<<<<<< HEAD
   composition: {S: 1, F: 5}
   charge: -1
-=======
-  composition: {S: 1, F: 5, E: 1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0]
@@ -13808,12 +13101,8 @@ species:
       -4.78374495e-12, 2.213516129e-16, -1.510609837e+05, -81.47574587]
     note: Gurvich,1989 pt1 p311 pt2 p191. [tpis89]
 - name: SF6-
-<<<<<<< HEAD
   composition: {S: 1, F: 6}
   charge: -1
-=======
-  composition: {S: 1, F: 6, E: 1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -13846,12 +13135,8 @@ species:
     rotational-relaxation: 1.0
     note: Kee et al.
 - name: SH-
-<<<<<<< HEAD
   composition: {S: 1, H: 1}
   charge: -1
-=======
-  composition: {S: 1, H: 1, E: 1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0]
@@ -13893,12 +13178,8 @@ species:
     rotational-relaxation: 1.0
     note: Kee et al.
 - name: SO-
-<<<<<<< HEAD
   composition: {S: 1, O: 1}
   charge: -1
-=======
-  composition: {S: 1, O: 1, E: 1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0]
@@ -13940,12 +13221,8 @@ species:
     rotational-relaxation: 1.0
     note: Kee et al.
 - name: SO2-
-<<<<<<< HEAD
   composition: {S: 1, O: 2}
   charge: -1
-=======
-  composition: {S: 1, O: 2, E: 1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0]
@@ -14028,12 +13305,8 @@ species:
     rotational-relaxation: 1.0
     note: Kee et al.
 - name: S2-
-<<<<<<< HEAD
   composition: {S: 2}
   charge: -1
-=======
-  composition: {S: 2, E: 1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0]
@@ -14156,12 +13429,8 @@ species:
       -6.23865002e-11, 7.425605615e-16, 1.092708359e+07, -2781.409383]
     note: Hf:Gurvich,1982. Sugar,1985. Gordon,1999. [g 1/99]
 - name: Sc+
-<<<<<<< HEAD
   composition: {Sc: 1}
   charge: 1
-=======
-  composition: {Sc: 1, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -14174,12 +13443,8 @@ species:
       -5.19020716e-12, 4.635586113e-17, 1.149364313e+06, -255.3294937]
     note: Sugar,1985. Gordon,1999. [g 7/97]
 - name: Sc-
-<<<<<<< HEAD
   composition: {Sc: 1}
   charge: -1
-=======
-  composition: {Sc: 1, E: 1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -14202,12 +13467,8 @@ species:
       6.91822154e-12, -1.109417319e-16, 2.162498313e+06, -365.033235]
     note: D0,Props(extrap):Gurvich,1982 pt1 p140 pt2 p143. [tpis89]
 - name: ScO+
-<<<<<<< HEAD
   composition: {Sc: 1, O: 1}
   charge: 1
-=======
-  composition: {Sc: 1, O: 1, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -14276,12 +13537,8 @@ species:
     rotational-relaxation: 0.0
     note: Kee et al.
 - name: Si+
-<<<<<<< HEAD
   composition: {Si: 1}
   charge: 1
-=======
-  composition: {Si: 1, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -14294,12 +13551,8 @@ species:
       2.509351585e-12, -5.090212919e-17, -4.68321441e+04, 51.9656419]
     note: Martin,W.C.,1983. Gordon,1999. [g 4/97]
 - name: Si-
-<<<<<<< HEAD
   composition: {Si: 1}
   charge: -1
-=======
-  composition: {Si: 1, E: 1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -14524,12 +13777,8 @@ species:
     rotational-relaxation: 1.0
     note: Kee et al.
 - name: SiH+
-<<<<<<< HEAD
   composition: {Si: 1, H: 1}
   charge: 1
-=======
-  composition: {Si: 1, H: 1, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0]
@@ -14926,12 +14175,8 @@ species:
       1.501409263e-11, -8.940758657e-17, -5.11129687e+06, 1245.625545]
     note: Hf:Cox,1989. Moore,1971. Gordon,1999. [g 7/97]
 - name: Sn+
-<<<<<<< HEAD
   composition: {Sn: 1}
   charge: 1
-=======
-  composition: {Sn: 1, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -14945,12 +14190,8 @@ species:
       -4.38839629e-12, 2.057062343e-17, 1.031631149e+06, -237.0157923]
     note: Moore,1971. Gordon,1999. [g 7/97]
 - name: Sn-
-<<<<<<< HEAD
   composition: {Sn: 1}
   charge: -1
-=======
-  composition: {Sn: 1, E: 1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -15207,12 +14448,8 @@ species:
       -7.82400346e-11, 1.10990962e-15, 4.57926834e+06, -1752.716908]
     note: Hf:Gurvich,1996a. Moore,1971. Moore,1970a. Gordon,1999. [g 1/98]
 - name: Sr+
-<<<<<<< HEAD
   composition: {Sr: 1}
   charge: 1
-=======
-  composition: {Sr: 1, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -15262,12 +14499,8 @@ species:
       7.11969848e-13, -2.001316762e-17, 7.44797907e+05, -187.6849167]
     note: Gurvich,1996a pt1 p515 pt2 p398. [tpis96]
 - name: SrCl+
-<<<<<<< HEAD
   composition: {Sr: 1, Cl: 1}
   charge: 1
-=======
-  composition: {Sr: 1, Cl: 1, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -15304,12 +14537,8 @@ species:
       5.12552439e-12, -6.6800716e-17, -2.048593542e+05, 79.955855]
     note: Gurvich,1996a pt1 p507 pt2 p394. [tpis96]
 - name: SrF+
-<<<<<<< HEAD
   composition: {Sr: 1, F: 1}
   charge: 1
-=======
-  composition: {Sr: 1, F: 1, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -15382,12 +14611,8 @@ species:
       -203.3702568]
     note: Gurvich,1996a pt1 p495 pt2 p384. [tpis96]
 - name: SrO+
-<<<<<<< HEAD
   composition: {Sr: 1, O: 1}
   charge: 1
-=======
-  composition: {Sr: 1, O: 1, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -15411,12 +14636,8 @@ species:
       -7.92128032e-11, 2.740829111e-15, 2.231302058e+04, -61.4878113]
     note: Gurvich,1996a pt1 p502 pt2 p390. [tpis96]
 - name: SrOH+
-<<<<<<< HEAD
   composition: {Sr: 1, O: 1, H: 1}
   charge: 1
-=======
-  composition: {Sr: 1, O: 1, H: 1, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0]
@@ -15473,12 +14694,8 @@ species:
       7.39729917e-11, -1.017863944e-15, -4.83641062e+06, 1607.00775]
     note: Hf:Gurvich,1982 p85. Moore,1971. Gordon,1999. [g 7/97]
 - name: Ta+
-<<<<<<< HEAD
   composition: {Ta: 1}
   charge: 1
-=======
-  composition: {Ta: 1, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -15491,12 +14708,8 @@ species:
       -5.75206033e-12, 7.63658187e-17, 4.4051155e+05, -104.0237652]
     note: Moore,1971. Gordon,1999. [g 7/97]
 - name: Ta-
-<<<<<<< HEAD
   composition: {Ta: 1}
   charge: -1
-=======
-  composition: {Ta: 1, E: 1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -15558,12 +14771,8 @@ species:
       -3.81145208e-11, 4.798092423e-16, 5.77261454e+06, -1518.080466]
     note: Hf:Cox,1989. Sugar,1985. Gordon,1999. [g 7/97]
 - name: Ti+
-<<<<<<< HEAD
   composition: {Ti: 1}
   charge: 1
-=======
-  composition: {Ti: 1, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -15576,12 +14785,8 @@ species:
       -8.44257176e-13, -4.517128089e-19, 3.34444062e+05, -52.2002627]
     note: Sugar,1985. Gordon,1999. [g 7/97]
 - name: Ti-
-<<<<<<< HEAD
   composition: {Ti: 1}
   charge: -1
-=======
-  composition: {Ti: 1, E: 1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -15652,12 +14857,8 @@ species:
       -203.0813444]
     note: Gurvich,1982 pt1 p99 pt2 p101. [tpis89]
 - name: TiO+
-<<<<<<< HEAD
   composition: {Ti: 1, O: 1}
   charge: 1
-=======
-  composition: {Ti: 1, O: 1, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -15731,12 +14932,8 @@ species:
       -239.6788565]
     note: Gurvich,1982 pt1 p202 pt2 p224. [tpis82]
 - name: UF+
-<<<<<<< HEAD
   composition: {U: 1, F: 1}
   charge: 1
-=======
-  composition: {U: 1, F: 1, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -15749,12 +14946,8 @@ species:
       4.31452755e-12, -6.02756983e-17, 1.776673362e+05, 24.09952635]
     note: Gurvich,1982 pt1 p203 pt2 p226. [tpis82]
 - name: UF-
-<<<<<<< HEAD
   composition: {U: 1, F: 1}
   charge: -1
-=======
-  composition: {U: 1, F: 1, E: 1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -15780,12 +14973,8 @@ species:
       -5.61396247e-13, 6.47236257e-18, -2.89776701e+04, -24.9296672]
     note: Gurvich,1982 pt1 p205 pt2 p230. [tpis82]
 - name: UF2+
-<<<<<<< HEAD
   composition: {U: 1, F: 2}
   charge: 1
-=======
-  composition: {U: 1, F: 2, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -15798,12 +14987,8 @@ species:
       9.77772909e-13, -1.189890068e-17, -3.936562e+05, 65.95164355]
     note: Gurvich,1982 pt1 p207 pt2 p232. [tpis82]
 - name: UF2-
-<<<<<<< HEAD
   composition: {U: 1, F: 2}
   charge: -1
-=======
-  composition: {U: 1, F: 2, E: 1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -15829,12 +15014,8 @@ species:
       9.77272625e-13, -1.189242739e-17, -5.30724264e+05, 52.56841035]
     note: Gurvich,1982 pt1 p210 pt2 p237. [tpis82]
 - name: UF3+
-<<<<<<< HEAD
   composition: {U: 1, F: 3}
   charge: 1
-=======
-  composition: {U: 1, F: 3, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -15847,12 +15028,8 @@ species:
       1.360286305e-13, -1.645113815e-18, -2.269266296e+05, 6.797911871]
     note: Gurvich,1982 pt1 p211 pt2 p239. [tpis82]
 - name: UF3-
-<<<<<<< HEAD
   composition: {U: 1, F: 3}
   charge: -1
-=======
-  composition: {U: 1, F: 3, E: 1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -15878,12 +15055,8 @@ species:
       1.147904592e-13, -1.368068374e-18, -3.83627044e+05, -8.486934342]
     note: Gurvich,1982 pt1 p215 pt2 p244. [tpis82]
 - name: UF4+
-<<<<<<< HEAD
   composition: {U: 1, F: 4}
   charge: 1
-=======
-  composition: {U: 1, F: 4, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -15896,12 +15069,8 @@ species:
       -5.0000716e-14, 1.088450028e-18, -2.028630553e+05, -17.08462849]
     note: Gurvich,1982 pt1 p216 pt2 p246. [tpis82]
 - name: UF4-
-<<<<<<< HEAD
   composition: {U: 1, F: 4}
   charge: -1
-=======
-  composition: {U: 1, F: 4, E: 1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -15927,12 +15096,8 @@ species:
       -4.41450667e-14, 1.011890437e-18, -3.62289327e+05, -31.37230618]
     note: Gurvich,1982 pt1 p219 pt2 p251. [tpis82]
 - name: UF5+
-<<<<<<< HEAD
   composition: {U: 1, F: 5}
   charge: 1
-=======
-  composition: {U: 1, F: 5, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -15945,12 +15110,8 @@ species:
       -7.63847487e-15, 9.94612694e-20, -1.071959701e+05, -47.25516365]
     note: Gurvich,1982 pt1 p220 pt2 p253. [tpis82]
 - name: UF5-
-<<<<<<< HEAD
   composition: {U: 1, F: 5}
   charge: -1
-=======
-  composition: {U: 1, F: 5, E: 1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -15976,12 +15137,8 @@ species:
       -4.13609006e-15, 5.36523768e-20, -2.646640074e+05, -65.13581536]
     note: Gurvich,1982 pt1 p223 pt2 p257. [tpis82]
 - name: UF6-
-<<<<<<< HEAD
   composition: {U: 1, F: 6}
   charge: -1
-=======
-  composition: {U: 1, F: 6, E: 1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -16007,12 +15164,8 @@ species:
       4.05370645e-12, -6.35476488e-17, 5.85461085e+05, -73.55640184]
     note: Gurvich,1982 pt1 p186 pt2 p205. [tpis82]
 - name: UO+
-<<<<<<< HEAD
   composition: {U: 1, O: 1}
   charge: 1
-=======
-  composition: {U: 1, O: 1, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -16082,12 +15235,8 @@ species:
       1.134573678e-13, -1.350744532e-18, -2.459740375e+05, 11.3370024]
     note: Gurvich,1982 pt1 p193 pt2 p211. [tpis82]
 - name: UO2+
-<<<<<<< HEAD
   composition: {U: 1, O: 2}
   charge: 1
-=======
-  composition: {U: 1, O: 2, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -16100,12 +15249,8 @@ species:
       -5.40829231e-14, 1.141506994e-18, -1.172230791e+05, 2.164589095]
     note: Gurvich,1982 pt1 p194 pt2 p213. [tpis82]
 - name: UO2-
-<<<<<<< HEAD
   composition: {U: 1, O: 2}
   charge: -1
-=======
-  composition: {U: 1, O: 2, E: 1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -16153,12 +15298,8 @@ species:
       -3.129107183e-11, 3.50491459e-16, 7.44806537e+06, -1824.526663]
     note: Gurvich,1982 pt1 p197 pt2 p218. [tpis82]
 - name: UO3-
-<<<<<<< HEAD
   composition: {U: 1, O: 3}
   charge: -1
-=======
-  composition: {U: 1, O: 3, E: 1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -16184,12 +15325,8 @@ species:
       -3.21468033e-11, 3.099999094e-16, 1.087152043e+07, -2439.95438]
     note: Hf:Gurvich,1982 p59. Sugar,1985. Gordon,1999. [g 7/97]
 - name: V+
-<<<<<<< HEAD
   composition: {V: 1}
   charge: 1
-=======
-  composition: {V: 1, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -16202,12 +15339,8 @@ species:
       -1.699749225e-11, 2.157800037e-16, 1.585980536e+06, -451.28226]
     note: Sugar,1985. Gordon,1999. [g 7/97]
 - name: V-
-<<<<<<< HEAD
   composition: {V: 1}
   charge: -1
-=======
-  composition: {V: 1, E: 1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -16293,12 +15426,8 @@ species:
     note: Hf:Gurvich,1982 p42. Moore,1971. Moore,1970a. Gordon,1999. [g
       4/98]
 - name: W+
-<<<<<<< HEAD
   composition: {W: 1}
   charge: 1
-=======
-  composition: {W: 1, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -16311,12 +15440,8 @@ species:
       -1.342970538e-11, 1.66763754e-16, 8.54693282e+05, -289.2805521]
     note: Moore,1971. Gordon,1999. [g 7/97]
 - name: W-
-<<<<<<< HEAD
   composition: {W: 1}
   charge: -1
-=======
-  composition: {W: 1, E: 1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -16394,12 +15519,8 @@ species:
       -6.58937872e-11, 1.142928957e-15, -2473.075565, -74.0747409]
     note: Gurvich,1982 pt1 p50 pt2 p52. [tpis82]
 - name: WO3-
-<<<<<<< HEAD
   composition: {W: 1, O: 3}
   charge: -1
-=======
-  composition: {W: 1, O: 3, E: 1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0]
@@ -16467,12 +15588,8 @@ species:
       -110.9834556]
     note: Ref-Elm. Moore,1971. Moore,1970a. Gordon,1999. [g 1/99]
 - name: Xe+
-<<<<<<< HEAD
   composition: {Xe: 1}
   charge: 1
-=======
-  composition: {Xe: 1, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -16497,12 +15614,8 @@ species:
       -7.12254474e-12, 1.691187274e-16, -1.217847671e+06, 345.943996]
     note: Hf:Cox,1989. Sugar,1995. Gordon,1999. [g 6/97]
 - name: Zn+
-<<<<<<< HEAD
   composition: {Zn: 1}
   charge: 1
-=======
-  composition: {Zn: 1, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -16528,12 +15641,8 @@ species:
       -6.23721212e-12, 8.010718759e-17, 2.351487351e+06, -509.318306]
     note: Hf:Gurvich,1982. Moore,1971. Hackett,1986. Gordon,1999. [g 1/98]
 - name: Zr+
-<<<<<<< HEAD
   composition: {Zr: 1}
   charge: 1
-=======
-  composition: {Zr: 1, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -16546,12 +15655,8 @@ species:
       -3.93074258e-08, 1.543806931e-12, -2.618341088e-17, 4907.29889, 46.4213048]
     note: Moore,1971. Moore,1970a. Gordon,1999. [g 1/98]
 - name: Zr-
-<<<<<<< HEAD
   composition: {Zr: 1}
   charge: -1
-=======
-  composition: {Zr: 1, E: 1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]
@@ -16588,12 +15693,8 @@ species:
       7.9596256e-13, -1.684162816e-17, 6.40667059e+05, -135.8472283]
     note: Gurvich,1982 pt1 p118 pt2 p118. [tpis82]
 - name: ZrO+
-<<<<<<< HEAD
   composition: {Zr: 1, O: 1}
   charge: 1
-=======
-  composition: {Zr: 1, O: 1, E: -1}
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
   thermo:
     model: NASA9
     temperature-ranges: [298.15, 1000.0, 6000.0, 2.0e+04]

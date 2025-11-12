@@ -230,11 +230,7 @@ species:
   thermo:
     model: constant-cp
     T0: 180.590 K
-<<<<<<< HEAD
     h0: 16.445e3
-=======
-    h0: 16445.000 J/mol
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
     s0: 0.000 
     cp0: 0.000 
 - name: B5H9(L)
@@ -242,11 +238,7 @@ species:
   thermo:
     model: constant-cp
     T0: 298.150 K
-<<<<<<< HEAD
     h0: 42.840e3
-=======
-    h0: 42840.000 J/mol
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
     s0: 0.000 
     cp0: 0.000 
 - name: (CH2)x(cr)
@@ -254,11 +246,7 @@ species:
   thermo:
     model: constant-cp
     T0: 298.150 K
-<<<<<<< HEAD
     h0: -25.600e3
-=======
-    h0: -25600.000 J/mol
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
     s0: 0.000 
     cp0: 0.000 
 - name: CH3NO2(L)
@@ -266,11 +254,7 @@ species:
   thermo:
     model: constant-cp
     T0: 298.150 K
-<<<<<<< HEAD
     h0: -113.100e3
-=======
-    h0: -113100.000 J/mol
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
     s0: 0.000 
     cp0: 0.000 
 - name: CH4(L)
@@ -278,11 +262,7 @@ species:
   thermo:
     model: constant-cp
     T0: 111.643 K
-<<<<<<< HEAD
     h0: -89.233e3
-=======
-    h0: -89233.000 J/mol
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
     s0: 0.000 
     cp0: 0.000 
 - name: CH6N2(L)
@@ -290,11 +270,7 @@ species:
   thermo:
     model: constant-cp
     T0: 298.150 K
-<<<<<<< HEAD
     h0: 54.200e3
-=======
-    h0: 54200.000 J/mol
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
     s0: 0.000 
     cp0: 0.000 
 - name: C2H2(L),acetyle
@@ -302,11 +278,7 @@ species:
   thermo:
     model: constant-cp
     T0: 192.350 K
-<<<<<<< HEAD
     h0: 207.599e3
-=======
-    h0: 207599.000 J/mol
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
     s0: 0.000 
     cp0: 0.000 
 - name: CH3CN(L)
@@ -314,11 +286,7 @@ species:
   thermo:
     model: constant-cp
     T0: 298.150 K
-<<<<<<< HEAD
     h0: 31.380e3
-=======
-    h0: 31380.000 J/mol
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
     s0: 0.000 
     cp0: 0.000 
 - name: C2H4(L)
@@ -326,11 +294,7 @@ species:
   thermo:
     model: constant-cp
     T0: 169.420 K
-<<<<<<< HEAD
     h0: 33.945e3
-=======
-    h0: 33945.000 J/mol
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
     s0: 0.000 
     cp0: 0.000 
 - name: C2H4O(L),ethyle
@@ -338,11 +302,7 @@ species:
   thermo:
     model: constant-cp
     T0: 283.650 K
-<<<<<<< HEAD
     h0: -78.841e3
-=======
-    h0: -78841.000 J/mol
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
     s0: 0.000 
     cp0: 0.000 
 - name: C2H6(L)
@@ -350,11 +310,7 @@ species:
   thermo:
     model: constant-cp
     T0: 184.559 K
-<<<<<<< HEAD
     h0: -103.819e3
-=======
-    h0: -103819.000 J/mol
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
     s0: 0.000 
     cp0: 0.000 
 - name: C2H8N2(L),UDMH
@@ -362,11 +318,7 @@ species:
   thermo:
     model: constant-cp
     T0: 298.150 K
-<<<<<<< HEAD
     h0: 48.900e3
-=======
-    h0: 48900.000 J/mol
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
     s0: 0.000 
     cp0: 0.000 
 - name: C2N2(L)
@@ -374,11 +326,7 @@ species:
   thermo:
     model: constant-cp
     T0: 252.050 K
-<<<<<<< HEAD
     h0: 283.209e3
-=======
-    h0: 283209.000 J/mol
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
     s0: 0.000 
     cp0: 0.000 
 - name: C3H6(L),propyle
@@ -386,11 +334,7 @@ species:
   thermo:
     model: constant-cp
     T0: 225.460 K
-<<<<<<< HEAD
     h0: -2.704e3
-=======
-    h0: -2704.000 J/mol
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
     s0: 0.000 
     cp0: 0.000 
 - name: C3H7NO3(L)
@@ -398,11 +342,7 @@ species:
   thermo:
     model: constant-cp
     T0: 298.150 K
-<<<<<<< HEAD
     h0: -214.500e3
-=======
-    h0: -214500.000 J/mol
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
     s0: 0.000 
     cp0: 0.000 
 - name: C3H8(L)
@@ -410,11 +350,7 @@ species:
   thermo:
     model: constant-cp
     T0: 231.076 K
-<<<<<<< HEAD
     h0: -128.228e3
-=======
-    h0: -128228.000 J/mol
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
     s0: 0.000 
     cp0: 0.000 
 - name: C4H8(L),1-buten
@@ -422,11 +358,7 @@ species:
   thermo:
     model: constant-cp
     T0: 266.920 K
-<<<<<<< HEAD
     h0: -25.173e3
-=======
-    h0: -25173.000 J/mol
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
     s0: 0.000 
     cp0: 0.000 
 - name: C4H10(L),n-buta
@@ -434,11 +366,7 @@ species:
   thermo:
     model: constant-cp
     T0: 272.638 K
-<<<<<<< HEAD
     h0: -150.664e3
-=======
-    h0: -150664.000 J/mol
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
     s0: 0.000 
     cp0: 0.000 
 - name: C4H10(L),isobut
@@ -446,11 +374,7 @@ species:
   thermo:
     model: constant-cp
     T0: 261.361 K
-<<<<<<< HEAD
     h0: -159.664e3
-=======
-    h0: -159664.000 J/mol
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
     s0: 0.000 
     cp0: 0.000 
 - name: C5H12(L),n-pent
@@ -458,11 +382,7 @@ species:
   thermo:
     model: constant-cp
     T0: 298.150 K
-<<<<<<< HEAD
     h0: -173.490e3
-=======
-    h0: -173490.000 J/mol
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
     s0: 0.000 
     cp0: 0.000 
 - name: ClF3(L)
@@ -470,11 +390,7 @@ species:
   thermo:
     model: constant-cp
     T0: 284.890 K
-<<<<<<< HEAD
     h0: -193.386e3
-=======
-    h0: -193386.000 J/mol
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
     s0: 0.000 
     cp0: 0.000 
 - name: ClO3F(L)
@@ -482,11 +398,7 @@ species:
   thermo:
     model: constant-cp
     T0: 226.400 K
-<<<<<<< HEAD
     h0: -47.436e3
-=======
-    h0: -47436.000 J/mol
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
     s0: 0.000 
     cp0: 0.000 
 - name: Cl2(L)
@@ -494,11 +406,7 @@ species:
   thermo:
     model: constant-cp
     T0: 239.120 K
-<<<<<<< HEAD
     h0: -22.550e3
-=======
-    h0: -22550.000 J/mol
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
     s0: 0.000 
     cp0: 0.000 
 - name: F2(L)
@@ -506,11 +414,7 @@ species:
   thermo:
     model: constant-cp
     T0: 85.020 K
-<<<<<<< HEAD
     h0: -13.091e3
-=======
-    h0: -13091.000 J/mol
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
     s0: 0.000 
     cp0: 0.000 
 - name: F2O(L)
@@ -518,11 +422,7 @@ species:
   thermo:
     model: constant-cp
     T0: 128.400 K
-<<<<<<< HEAD
     h0: 6.672e3
-=======
-    h0: 6672.000 J/mol
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
     s0: 0.000 
     cp0: 0.000 
 - name: HNO3(L)
@@ -530,11 +430,7 @@ species:
   thermo:
     model: constant-cp
     T0: 298.150 K
-<<<<<<< HEAD
     h0: -173.013e3
-=======
-    h0: -173013.000 J/mol
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
     s0: 0.000 
     cp0: 0.000 
 - name: H2(L)
@@ -542,11 +438,7 @@ species:
   thermo:
     model: constant-cp
     T0: 20.270 K
-<<<<<<< HEAD
     h0: -9.012e3
-=======
-    h0: -9012.000 J/mol
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
     s0: 0.000 
     cp0: 0.000 
 - name: IRFNA(L)
@@ -554,11 +446,7 @@ species:
   thermo:
     model: constant-cp
     T0: 298.150 K
-<<<<<<< HEAD
     h0: -270.496e3
-=======
-    h0: -270496.000 J/mol
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
     s0: 0.000 
     cp0: 0.000 
 - name: JP-4(L)
@@ -566,11 +454,7 @@ species:
   thermo:
     model: constant-cp
     T0: 298.150 K
-<<<<<<< HEAD
     h0: -22.723e3
-=======
-    h0: -22723.000 J/mol
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
     s0: 0.000 
     cp0: 0.000 
 - name: JP-5(L)
@@ -578,11 +462,7 @@ species:
   thermo:
     model: constant-cp
     T0: 298.150 K
-<<<<<<< HEAD
     h0: -22.183e3
-=======
-    h0: -22183.000 J/mol
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
     s0: 0.000 
     cp0: 0.000 
 - name: JP-10(L)
@@ -590,11 +470,7 @@ species:
   thermo:
     model: constant-cp
     T0: 298.150 K
-<<<<<<< HEAD
     h0: -122.800e3
-=======
-    h0: -122800.400 J/mol
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
     s0: 0.000 
     cp0: 0.000 
 - name: LiClO4(cr)
@@ -602,11 +478,7 @@ species:
   thermo:
     model: constant-cp
     T0: 298.150 K
-<<<<<<< HEAD
     h0: -380.700e3
-=======
-    h0: -380700.000 J/mol
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
     s0: 0.000 
     cp0: 0.000 
 - name: NF3(L)
@@ -614,11 +486,7 @@ species:
   thermo:
     model: constant-cp
     T0: 144.090 K
-<<<<<<< HEAD
     h0: -150.387e3
-=======
-    h0: -150387.000 J/mol
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
     s0: 0.000 
     cp0: 0.000 
 - name: NH3(L)
@@ -626,11 +494,7 @@ species:
   thermo:
     model: constant-cp
     T0: 239.720 K
-<<<<<<< HEAD
     h0: -71.555e3
-=======
-    h0: -71555.000 J/mol
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
     s0: 0.000 
     cp0: 0.000 
 - name: N2(L)
@@ -638,11 +502,7 @@ species:
   thermo:
     model: constant-cp
     T0: 77.352 K
-<<<<<<< HEAD
     h0: -12.107e3
-=======
-    h0: -12107.000 J/mol
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
     s0: 0.000 
     cp0: 0.000 
 - name: N2O4(L)
@@ -650,11 +510,7 @@ species:
   thermo:
     model: constant-cp
     T0: 298.150 K
-<<<<<<< HEAD
     h0: -17.549e3
-=======
-    h0: -17549.000 J/mol
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
     s0: 0.000 
     cp0: 0.000 
 - name: O2(L)
@@ -662,11 +518,7 @@ species:
   thermo:
     model: constant-cp
     T0: 90.170 K
-<<<<<<< HEAD
     h0: -12.979e3
-=======
-    h0: -12979.000 J/mol
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
     s0: 0.000 
     cp0: 0.000 
 - name: O3(L)
@@ -674,11 +526,7 @@ species:
   thermo:
     model: constant-cp
     T0: 161.850 K
-<<<<<<< HEAD
     h0: 122.527e3
-=======
-    h0: 122527.000 J/mol
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
     s0: 0.000 
     cp0: 0.000 
 - name: RP-1(L)
@@ -686,11 +534,7 @@ species:
   thermo:
     model: constant-cp
     T0: 298.150 K
-<<<<<<< HEAD
     h0: -24.717e3
-=======
-    h0: -24717.700 J/mol
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
     s0: 0.000 
     cp0: 0.000 
 - name: C2H5OH(L),95%
@@ -698,11 +542,7 @@ species:
   thermo:
     model: constant-cp
     T0: 298.150 K
-<<<<<<< HEAD
     h0: -278.138e3
-=======
-    h0: -278138.951 J/mol
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
     s0: 0.000 
     cp0: 0.000 
 - name: C2H5OH(L),90%
@@ -710,11 +550,7 @@ species:
   thermo:
     model: constant-cp
     T0: 298.150 K
-<<<<<<< HEAD
     h0: -279.114e3
-=======
-    h0: -279114.911 J/mol
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
     s0: 0.000 
     cp0: 0.000 
 - name: C2H5OH(L),70%
@@ -722,11 +558,7 @@ species:
   thermo:
     model: constant-cp
     T0: 298.150 K
-<<<<<<< HEAD
     h0: -282.043e3
-=======
-    h0: -282043.275 J/mol
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
     s0: 0.000 
     cp0: 0.000 
 - name: C2H5OH(L),50%
@@ -734,11 +566,7 @@ species:
   thermo:
     model: constant-cp
     T0: 298.150 K
-<<<<<<< HEAD
     h0: -283.987e3
-=======
-    h0: -283987.650 J/mol
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
     s0: 0.000 
     cp0: 0.000 
 - name: C2H5OH(L),40%
@@ -746,11 +574,7 @@ species:
   thermo:
     model: constant-cp
     T0: 298.150 K
-<<<<<<< HEAD
     h0: -284.727e3
-=======
-    h0: -284727.141 J/mol
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
     s0: 0.000 
     cp0: 0.000 
 - name: H2O2(L),95%
@@ -758,11 +582,7 @@ species:
   thermo:
     model: constant-cp
     T0: 298.150 K
-<<<<<<< HEAD
     h0: -196.942e3
-=======
-    h0: -196942.961 J/mol
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
     s0: 0.000 
     cp0: 0.000 
 - name: H2O2(L),90%
@@ -770,11 +590,7 @@ species:
   thermo:
     model: constant-cp
     T0: 298.150 K
-<<<<<<< HEAD
     h0: -205.357e3
-=======
-    h0: -205357.858 J/mol
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
     s0: 0.000 
     cp0: 0.000 
 - name: H2O2(L),85%
@@ -782,11 +598,7 @@ species:
   thermo:
     model: constant-cp
     T0: 298.150 K
-<<<<<<< HEAD
     h0: -213.056e3
-=======
-    h0: -213056.950 J/mol
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
     s0: 0.000 
     cp0: 0.000 
 - name: H2O2(L),80%
@@ -794,11 +606,7 @@ species:
   thermo:
     model: constant-cp
     T0: 298.150 K
-<<<<<<< HEAD
     h0: -220.096e3
-=======
-    h0: -220096.952 J/mol
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
     s0: 0.000 
     cp0: 0.000 
 - name: H2O2(L),75%
@@ -806,11 +614,7 @@ species:
   thermo:
     model: constant-cp
     T0: 298.150 K
-<<<<<<< HEAD
     h0: -226.624e3
-=======
-    h0: -226624.629 J/mol
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
     s0: 0.000 
     cp0: 0.000 
 - name: H2O2(L),70%
@@ -818,11 +622,7 @@ species:
   thermo:
     model: constant-cp
     T0: 298.150 K
-<<<<<<< HEAD
     h0: -232.636e3
-=======
-    h0: -232636.113 J/mol
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
     s0: 0.000 
     cp0: 0.000 
 - name: H2O2(L),60%
@@ -830,11 +630,7 @@ species:
   thermo:
     model: constant-cp
     T0: 298.150 K
-<<<<<<< HEAD
     h0: -243.438e3
-=======
-    h0: -243438.083 J/mol
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
     s0: 0.000 
     cp0: 0.000 
 - name: H2O2(L),50%
@@ -842,11 +638,7 @@ species:
   thermo:
     model: constant-cp
     T0: 298.150 K
-<<<<<<< HEAD
     h0: -252.801e3
-=======
-    h0: -252801.671 J/mol
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
     s0: 0.000 
     cp0: 0.000 
 - name: T-1(L)
@@ -854,11 +646,7 @@ species:
   thermo:
     model: constant-cp
     T0: 298.150 K
-<<<<<<< HEAD
     h0: -27.377e3
-=======
-    h0: -27377.210 J/mol
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
     s0: 0.000 
     cp0: 0.000 
 - name: C6H12O6(cr)
@@ -866,11 +654,7 @@ species:
   thermo:
     model: constant-cp
     T0: 298.150 K
-<<<<<<< HEAD
     h0: -1273.121e3
-=======
-    h0: -1273121.249 J/mol
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
     s0: 0.000 
     cp0: 0.000 
 - name: C20H42(L)
@@ -878,11 +662,7 @@ species:
   thermo:
     model: constant-cp
     T0: 298.150 K
-<<<<<<< HEAD
     h0: -556.500e3
-=======
-    h0: -556500.000 J/mol
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
     s0: 0.000 
     cp0: 0.000 
 - name: C32H66(S)
@@ -890,11 +670,7 @@ species:
   thermo:
     model: constant-cp
     T0: 298.150 K
-<<<<<<< HEAD
     h0: -967.800e3
-=======
-    h0: -967800.000 J/mol
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
     s0: 0.000 
     cp0: 0.000 
 - name: N2O(L),298.15
@@ -902,10 +678,6 @@ species:
   thermo:
     model: constant-cp
     T0: 298.150 K
-<<<<<<< HEAD
     h0: 65.100e3
-=======
-    h0: 65100.000 J/mol
->>>>>>> e40fe040899509b1fc50c13a3800e0296e2bb997
     s0: 0.000 
     cp0: 0.000 
