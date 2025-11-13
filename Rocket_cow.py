@@ -1269,7 +1269,7 @@ def convert_df(df):
 def contour_design( ox, f, t_ox, t_fuel, of, pressure, pressure_exit, thrust, length_value, contraction_ratio, contraction_angle=30, nozzle_inlet_radius_ratio=0.5, throat_inlet_radius_ratio = None, 
                     length_parameter = 'characteristic length', throat_outlet_radius_ratio=0.382, expansion_angle=15, temperature_wall=500, fidelity = 200):
     oxidizer, fuel, gas, condensate, transport = chemistry_initializer(ox, f, temp_oxidizer=t_ox, temp_fuel=t_fuel)
-    da_engine = Engine(oxidizer, fuel, of, pressure, pressure_exit, gas, thrust, condensate=condensate, transport=transport)
+    da_engine = Engine(oxidizer, fuel, of, pressure, pressure_exit, gas, thrust, condensate=condensate, transport=transport, temperature_wall=temperature_wall)
     da_engine.conical_contour(length_value, contraction_ratio, contraction_angle=contraction_angle, nozzle_inlet_radius_ratio=nozzle_inlet_radius_ratio, throat_inlet_radius_ratio = throat_inlet_radius_ratio, 
                                 length_parameter = length_parameter, throat_outlet_radius_ratio=throat_outlet_radius_ratio, expansion_angle=expansion_angle, fidelity = fidelity)
     properties = da_engine.properties_along_contour(fidelity)
@@ -1277,7 +1277,7 @@ def contour_design( ox, f, t_ox, t_fuel, of, pressure, pressure_exit, thrust, le
     return properties
 
 @st.cache_data
-def contour_plot(contour, var1, var2, var3, var4):
+def contour_plot(contour, var1, var2, var3):
     fig = go.Figure()
     fig.update_layout(xaxis=dict(title = dict(text="Axial distance (m)"), domain=[0, 0.9]), 
                     title_text="Properties along Engine contour")
@@ -1289,14 +1289,15 @@ def contour_plot(contour, var1, var2, var3, var4):
                  'heat flux' : 'W/m^2', 'pressure' : 'Pa'}
     fig.add_trace(go.Scatter(x = contour.index, y = contour['diameter']/2, name= f"radius (m)"))
 
-    for i, prop in enumerate([var1, var2, var3, var4]): 
-        fig.add_trace(go.Scatter(x = contour.index, y = contour[prop], name= f"{var1} {unit_dict[var1]}", yaxis=f"y{i+2}"))
+    for i, prop in enumerate([var1, var2, var3]): 
+        fig.add_trace(go.Scatter(x = contour.index, y = contour[prop], name= f"{prop} {unit_dict[prop]}", yaxis=f"y{i+2}"))
 
-    fig.update_layout(yaxis=dict(title=dict(text="Radius (m)"),side="right", rangemode='tozero',position=0.9, automargin = True),
+    fig.update_layout(yaxis=dict(title=dict(text="Radius (m)"),side="right", rangemode='tozero', position=0.9, automargin = True),
                     yaxis2=dict(title=dict(text=f"{var1} {unit_dict[var1]}"),overlaying="y"),
                     yaxis3=dict(title=dict(text=f"{var2} {unit_dict[var2]}"),anchor="free",overlaying="y",autoshift=True),
                     yaxis4=dict(title=dict(text=f"{var3} {unit_dict[var3]}"),anchor="free",overlaying="y",autoshift=True),
-                    yaxis5=dict(title=dict(text=f"{var4} {unit_dict[var4]}"),anchor="free",overlaying="y",autoshift=True))
+                    )
+    # yaxis5=dict(title=dict(text=f"{var4} {unit_dict[var4]}"),anchor="free",overlaying="y",autoshift=True)
     return fig
 
 ### Creates the UI ###
@@ -1421,16 +1422,16 @@ if state.run_button:
             st.divider()
             st.subheader("Engine Geometry")
             col1, col2 = st.columns(2)
-            col1.selectbox('Length parameter', [ 'chamber length', 'characteristic length'], key='length_param')
-            col2.number_input('length (m):', key='length', min_value=0.0 ,value=0.3 , step=0.1)
+            col1.selectbox('Length parameter', ['characteristic length', 'chamber length'], key='length_param')
+            col2.number_input('length (m):', key='length', min_value=0.0 ,value=0.9 , step=0.1)
             col1, col2, col3 = st.columns(3)
-            col1.number_input('contraction ratio:', key='contraction_ratio', min_value = 1.0001, value = 2.0, step=0.1)
+            col1.number_input('contraction ratio:', key='contraction_ratio', min_value = 1.0001, value = 5.0, step=0.1)
             col2.number_input('contraction angle (deg):', key='contraction_angle', min_value = 1.0, value = 30.0, max_value=89.0,  step = 1.0)
             col3.number_input('expansion angle (deg):', key='expansion_angle', min_value = 1.0, value= 15.0, max_value=89.0, step= 1.0)
             col1, col2, col3 = st.columns(3)
             col1.number_input('nozzle inlet radius ratio:', key='nin_ratio', min_value = 0.01, value = 0.5, max_value=1.0, step=0.1)
             col2.number_input('throat inlet radius ratio:', key='tin_ratio', min_value = 0.01, value = 1.5,  step = 0.1)
-            col3.number_input('throat outlet radius ratio:', key='tout_ratio', min_value = 0.01, value= 0.382, step= 0.1)
+            col3.number_input('throat outlet radius ratio:', key='tout_ratio', min_value = 0.01, value= 1.0, step= 0.1)
 
 
             # Fidelity
@@ -1441,8 +1442,8 @@ if state.run_button:
 
         if state.contour_button:
 
-            state.contour_properties = contour_design(  state.ox, state.fuel, state.temp_ox, state.temp_fuel, state.of_ratio, state.pressure, 
-                                                        state.pressure_exit, state.engine_thrust, state.length, state.contraction_ratio, 
+            state.contour_properties = contour_design(  state.ox, state.fuel, state.temp_ox, state.temp_fuel, state.of_ratio, state.pressure*1e5, 
+                                                        state.pressure_exit*1e5, state.engine_thrust, state.length, state.contraction_ratio, 
                                                         contraction_angle=state.contraction_angle, nozzle_inlet_radius_ratio=state.nin_ratio, 
                                                         throat_inlet_radius_ratio = state.tin_ratio, length_parameter = state.length_param, 
                                                         throat_outlet_radius_ratio=state.tout_ratio, expansion_angle=state.expansion_angle, 
@@ -1455,7 +1456,7 @@ if state.run_button:
                 csv = convert_df(state.contour_properties)
                 st.download_button("Press to Download", csv, "file.csv", "text/csv", key='download-csv-contour')
             
-            col1, col2 = st.columns(2)
+            col1, col2, col3= st.columns(3)
             col1.selectbox('Variable:', [ 'temperature', 'pressure', 'density', 'specific volume',
                                     'enthalpy', 'internal energy', 'gibbs', 'entropy', 'molar mass', 'c_p',
                                     'c_v', 'gamma', 'gamma_s', 'speed sound', 'viscosity',
@@ -1469,20 +1470,20 @@ if state.run_button:
                                     'thermal conductivity', 'prandtl number' , 'mach',
                                     'area ratio', 'I_sp', 'I_vac', 'c*', 'C_f', 'thrust', 'mass flow',
                                     'area', 'diameter', 'heat transfer coefficient', 'heat flux'], key='second')
-            col1, col2 = st.columns(2)
-            col1.selectbox('Variable:', [ 'pressure','temperature', 'density', 'specific volume',
+            # col1, col2 = st.columns(2)
+            col3.selectbox('Variable:', [ 'heat transfer coefficient','pressure', 'temperature', 'density', 'specific volume',
                                     'enthalpy', 'internal energy', 'gibbs', 'entropy', 'molar mass', 'c_p',
                                     'c_v', 'gamma', 'gamma_s', 'speed sound', 'viscosity',
                                     'thermal conductivity', 'prandtl number', 'velocity', 'mach',
                                     'area ratio', 'I_sp', 'I_vac', 'c*', 'C_f', 'thrust', 'mass flow',
                                     'area', 'diameter', 'heat transfer coefficient', 'heat flux'], key='third')
             
-            col2.selectbox('Variable:', ['heat transfer coefficient',  'temperature', 'pressure', 'density', 'specific volume',
-                                    'enthalpy', 'internal energy', 'gibbs', 'entropy', 'molar mass', 'c_p',
-                                    'c_v', 'gamma', 'gamma_s', 'speed sound', 'viscosity',
-                                    'thermal conductivity', 'prandtl number', 'velocity', 'mach',
-                                    'area ratio', 'I_sp', 'I_vac', 'c*', 'C_f', 'thrust', 'mass flow',
-                                    'area', 'diameter', 'heat flux'], key='fourth')
+            # col2.selectbox('Variable:', ['heat transfer coefficient',  'temperature', 'pressure', 'density', 'specific volume',
+            #                         'enthalpy', 'internal energy', 'gibbs', 'entropy', 'molar mass', 'c_p',
+            #                         'c_v', 'gamma', 'gamma_s', 'speed sound', 'viscosity',
+            #                         'thermal conductivity', 'prandtl number', 'velocity', 'mach',
+            #                         'area ratio', 'I_sp', 'I_vac', 'c*', 'C_f', 'thrust', 'mass flow',
+            #                         'area', 'diameter', 'heat flux'], key='fourth')
             
-            state.contour_fig = contour_plot(state.contour_properties, state.first, state.second, state.third, state.fourth)
+            state.contour_fig = contour_plot(state.contour_properties, state.first, state.second, state.third)
             st.plotly_chart(state.contour_fig)
